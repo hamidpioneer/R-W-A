@@ -1,11 +1,11 @@
 {
-  "name": "project-roket-web-app",
+  "name": "roket-web-app",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
     "js-compile-plugins": "babel --presets env js/src/ --out-dir js/dist/"
   },
-  "author": "MDBootstrap",
+  "author": "hamidpioneer",
   "license": "MIT",
   "devDependencies": {
     "babel-cli": "^6.26.0",
