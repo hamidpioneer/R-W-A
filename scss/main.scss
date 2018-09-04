@@ -1,8 +1,29 @@
+@import 'base/colors';
 @import 'base/reset';
+@import 'base/typography';
+
+@import 'components/button';
 @import 'components/gallery';
+@import 'components/navigation';
+
 @import 'helpers/mixins';
+@import 'helpers/variables';
+
+// Start General Styles
+.section-padding {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    border: 1px solid red;
+}
 
 
+// End General Styles
+
+
+
+// Start Hero Area
 .hero-area {
     // border: 2px solid red;
     height: 100vh;
@@ -35,7 +56,7 @@
         height: 100%;
         min-height: 100px;
     }
-    
+
     .branding {
         margin-bottom: 1rem;
 
@@ -72,9 +93,9 @@
         .hero-area__top {
             position: relative;
             z-index: 1;
-            overflow: hidden;     
-            padding-bottom: 2rem;      
-            
+            overflow: hidden;
+            padding-bottom: 2rem;
+
             .hero-text {
             }
         }
@@ -108,7 +129,7 @@
                         right: 48%;
                         transform: scale(.8) rotate(-10deg);
                     }
-                    
+
                     &:nth-child(2) {
                         right: auto;
                         left: 48%;
@@ -118,7 +139,7 @@
             }
         }
 
-        
+
     }
 
     .hero-area__btns {
@@ -126,8 +147,10 @@
     }
 
 }
+// End Hero Area
 
-.section-padding {
-    padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
-}
+
+
+// Start Slider Area 1
+
+// End Slider Area 1

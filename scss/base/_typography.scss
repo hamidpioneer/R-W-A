@@ -1,3 +1,13 @@
+// @import 'base/colors';
+// @import 'base/reset';
+
+// @import 'components/button';
+// @import 'components/gallery';
+// @import 'components/navigation';
+
+@import 'helpers/mixins';
+@import 'helpers/variables';
+
 
 $sans-serif-primary: 'Lato', sans-serif;
 $sans-serif-secondary: 'Montserrat', sans-serif;
@@ -15,4 +25,58 @@ $font-size-x-small: .6rem;
 $font-size-large: 1.2rem;
 $font-size-x-large: 1.5rem;
 
+
+.section-padding {
+    text-align: center;
+}
+
+.section-heading {
+    margin-bottom: $spacer-large;
+}
+
+.heading {
+    font-size: $font-size-large;
+    margin-bottom: $spacer-medium;
+}
+
+
+
+
+
+.section-content {
+    .content-box {
+        padding: $spacer-large;
+        @include border-radius();
+        @include box-shadow(1);
+        overflow: hidden;
+        position: relative;
+        z-index: 1;
+        &:hover {
+            @include box-shadow(2);
+        }
+        p:last-of-type {
+            border: 2px solid red;
+        }
+
+        &.color-bg {
+            postion: relative;
+            z-index: 1;
+            &::before {
+                @include before-after();
+                background: $bg-color-primary;
+                z-index: -1;
+            }  
+            &.text-light {
+                color: $text-color-light !important;   
+                .heading {
+                    color: $text-color-light;
+                }
+            }
+        }
+
+        .heading {
+            font-size: $font-size-large;
+        }
+    }
+}
 

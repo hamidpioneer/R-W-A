@@ -1,6 +1,12 @@
-@import 'typography';
-@import 'colors';
-@import '../helpers/variables';
+// @import 'base/colors';
+@import 'base/typography';
+
+// @import 'components/button';
+// @import 'components/gallery';
+// @import 'components/navigation';
+
+// @import 'helpers/mixins';
+// @import 'helpers/variables';
 
 
 html, body {
@@ -18,11 +24,11 @@ html, body {
 body {
     font-family: $sans-serif-primary;
     font-weight: $font-light;
+    font-size: 14px;
     color: $text-color-dark;
+    line-height: 1.4;
     background: $body-bg;
     position: relative;
-    line-height: 1.4;
-    font-size: $font-size-normal;
 }
 
 a {
@@ -40,6 +46,7 @@ textarea:focus {
 h1, h2, h3, h4, h5, h6 {
     font-family: $sans-serif-primary;
     font-weight: $font-bold;
+    color: $text-color-dark;
 }
 
 input[type="text"],

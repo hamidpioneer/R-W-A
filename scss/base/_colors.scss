@@ -1,3 +1,13 @@
+// @import 'base/reset';
+// @import 'base/typography';
+
+// @import 'components/button';
+// @import 'components/gallery';
+// @import 'components/navigation';
+
+// @import 'helpers/mixins';
+// @import 'helpers/variables';
+
 $color-accent: #FFD200;
 $color-primary: #6454E3;
 $color-secondary: #FC7151;
@@ -8,8 +18,9 @@ $color-light: #FFF;
 
 $text-color-dark: #261F1F;
 $text-color-black: #000;
-$text-color-light-gray: rgba(255,255,255,.84);
+$text-color-light-gray: rgba(42, 11, 11, 0.84);
 $text-color-light: #FFF;
 
 
 $body-bg: $color-light;
+$bg-color-primary: $color-primary;
