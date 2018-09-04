@@ -7,7 +7,7 @@
 @import 'components/navigation';
 
 @import 'helpers/mixins';
-@import 'helpers/variables';
+// @import 'helpers/variables';
 
 // Start General Styles
 .section-padding {
@@ -97,6 +97,7 @@
             padding-bottom: 2rem;
 
             .hero-text {
+                color: $text-color-light;
             }
         }
         .hero-area__bottom {
@@ -152,5 +153,99 @@
 
 
 // Start Slider Area 1
+.content-box {
+    
+    @include border-radius();
+    @include box-shadow(1);
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+    &:hover {
+        @include box-shadow(2);
+    }
+    p:last-of-type {
+        margin-bottom: none;
+    }
 
+    &.color-bg {
+        padding: $spacer-large;
+        postion: relative;
+        z-index: 1;
+        &::before {
+            @include before-after();
+            background: $bg-color-primary;
+            z-index: -2;
+            opacity: 1;
+        }  
+        &::after {
+            @include before-after();
+            background: url("/img/Others/texture__social-icons.png");
+            z-index: -1;
+            opacity: .05;
+        }  
+        &.text-light {
+            color: $text-color-light !important;   
+            .heading {
+                color: $text-color-light;
+            }
+        }
+    }
+
+    .heading {
+        font-size: $font-size-large;
+    }
+
+    .site-btn--light {
+        margin-top: $spacer-medium;
+    }
+}
 // End Slider Area 1
+
+
+
+
+// Start Support Area
+.support-area {
+    .content-box {
+        box-shadow: none;
+        overflow: initial;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gird-template-rows: auto;
+        grid-gap: $spacer-medium;
+        .support-item {
+            dispaly: flex;
+            flex-flow: column wrap;
+            justify-content: center;
+            align-items: center;
+            padding: $spacer-medium 0;
+            border: 0;
+            @include box-shadow(.5);
+            @include transition();
+
+            &:hover {
+                background-color: $color-primary;
+                @include box-shadow();
+                i.fa {
+                    color: $text-color-light;
+                }
+                span {
+                    color: $text-color-light;
+                }
+            }
+
+            i.fa {
+                font-size: $icon-size-medium;
+                color: $text-color-primary;
+                transform: rotate(90deg);
+            }
+            span{
+                display: block;
+                margin-top: $spacer-small;
+                font-size: $font-size-small;
+
+            }          
+        }
+    }
+}
+// End Support Area

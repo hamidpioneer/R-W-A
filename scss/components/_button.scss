@@ -8,12 +8,37 @@
 // @import 'helpers/mixins';
 // @import 'helpers/variables';
 
+%site-btn--shared {
+    font-size: $font-size-normal;
+    text-transform: initial !important;
+    @include border-radius();
+}
 
 .site-btn--light {
-    background-color: $color-light;
-    font-size: $font-size-normal;
-    @include border-radius();
+    @extend %site-btn--shared;
+    background-color: $color-light;    
     a {
         color: $text-color-dark;
+        i.fa {
+            color: $text-color-dark;
+        }
     }
+}
+
+.site-btn--dark {
+    @extend %site-btn--shared;
+    background-color: $color-primary;
+    a {
+        color: $text-color-light !important;
+        i.fa {
+            color: $text-color-light;
+        }
+    }
+
+}
+
+.site-btn__support-btn--light {
+
+    
+
 }
