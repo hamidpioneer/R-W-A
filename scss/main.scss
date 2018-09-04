@@ -1,0 +1,133 @@
+@import 'base/reset';
+@import 'components/gallery';
+@import 'helpers/mixins';
+
+
+.hero-area {
+    // border: 2px solid red;
+    height: 100vh;
+    text-align: center;
+    color: $text-color-light-gray;
+    &::before {
+        background: $color-primary;
+        background-repeat: no-repeat;
+        background-position: top top;
+        background-size: contain;
+        content: "";
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 10%;
+    }
+    &::after {
+        background: url("../img/elements/top-1.png");
+        background-repeat: no-repeat;
+        background-position: top center;
+        background-size: contain;
+        content: "";
+        position: absolute;
+        z-index: -2;
+        top: 10%;
+        left: -10%;
+        width: 130%;
+        height: 100%;
+        min-height: 100px;
+    }
+    
+    .branding {
+        margin-bottom: 1rem;
+
+        img {
+            max-width: 3.5rem;
+        }
+        h1 {
+            color: $text-color-light;
+            font-family: $sans-serif-secondary;
+            font-weight: $font-light;
+            font-size: 1.5rem;
+            margin: 0;
+            line-height: 1;
+            span {
+                font-weight: $font-bold;
+            }
+        }
+        .version {
+            color:  $text-color-dark;
+            background:  $color-light;
+            font-size: .5rem;
+            border-radius: 10rem;
+            display:  inline-block;
+            padding: .0125rem .5rem;
+            margin: 0;
+        }
+
+    }
+
+    .hero-area__full-height {
+        position: relative;
+        height: 100%;
+        height: calc(100vh - 3rem);
+        .hero-area__top {
+            position: relative;
+            z-index: 1;
+            overflow: hidden;     
+            padding-bottom: 2rem;      
+            
+            .hero-text {
+            }
+        }
+        .hero-area__bottom {
+            position: relative;
+            z-index: 1;
+            background: transparent;
+            margin-right: -15px;
+            margin-left: -15px;
+
+            a {
+                background:  red;
+                margin: 0 15px;
+                display:  block;
+                bottom: 3rem;
+                color: #fff !important;
+                text-transform: inherit;
+                padding: 1.4rem;
+            }
+            .hero-image__wrapper {
+                position: relative;
+                min-height: 60vh;
+                img {
+                    position:  absolute;
+                    max-height: 60vh;
+                    bottom:  0;
+                    height:  100%;
+                    max-width: 100%;
+                    &:nth-child(1) {
+                        left: auto;
+                        right: 48%;
+                        transform: scale(.8) rotate(-10deg);
+                    }
+                    
+                    &:nth-child(2) {
+                        right: auto;
+                        left: 48%;
+                        transform:  rotate(10deg);
+                    }
+                }
+            }
+        }
+
+        
+    }
+
+    .hero-area__btns {
+        margin-top:  3rem;
+    }
+
+}
+
+.section-padding {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+}

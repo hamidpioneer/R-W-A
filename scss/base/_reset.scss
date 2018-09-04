@@ -1,0 +1,55 @@
+@import 'typography';
+@import 'colors';
+@import '../helpers/variables';
+
+
+html, body {
+    box-sizing: border-box;
+    height: 100%;
+    padding: 0;
+    margin: 0;   
+}
+
+*, *::after, *::before {
+    box-sizing: inherit;
+}
+
+
+body {
+    font-family: $sans-serif-primary;
+    font-weight: $font-light;
+    color: $text-color-dark;
+    background: $body-bg;
+    position: relative;
+    line-height: 1.4;
+    font-size: $font-size-normal;
+}
+
+a {
+  color: $text-color-dark !important;
+  text-decoration: none;
+}
+
+a:focus,
+button:focus,
+input:focus,
+textarea:focus {
+  outline: 0 solid;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: $sans-serif-primary;
+    font-weight: $font-bold;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="password"],
+input[type="url"],
+textarea {
+  background-color: #f9f9f9;
+  border: none;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
