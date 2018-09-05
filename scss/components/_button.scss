@@ -17,28 +17,20 @@
 .site-btn--light {
     @extend %site-btn--shared;
     background-color: $color-light;    
-    a {
+    color: $text-color-dark;
+    i.fa {
         color: $text-color-dark;
-        i.fa {
-            color: $text-color-dark;
-        }
     }
 }
 
 .site-btn--dark {
     @extend %site-btn--shared;
     background-color: $color-primary;
-    a {
-        color: $text-color-light !important;
-        i.fa {
-            color: $text-color-light;
-        }
-    }
-
+    color: $text-color-light !important;
 }
 
 .site-btn__support-btn--light {
 
-    
+
 
 }
