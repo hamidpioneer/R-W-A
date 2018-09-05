@@ -44,6 +44,9 @@ textarea {
   padding: 1rem;
   margin-bottom: 1rem; }
 
+img {
+  max-width: 100%; }
+
 .site-btn--light, .site-btn--dark {
   font-size: 1rem;
   text-transform: initial !important;
@@ -82,6 +85,12 @@ textarea {
 .heading {
   font-size: 1.2rem;
   margin-bottom: 1rem; }
+
+.pre-heading {
+  font-size: 0.8rem;
+  font-weight: 400;
+  margin-bottom: 0.5rem;
+  color: rgba(0, 0, 0, 0.34); }
 
 .hero-section {
   padding-top: 1rem;
@@ -381,3 +390,72 @@ textarea {
         text-overflow: ellipsis;
         margin-top: 0.25rem;
         text-transform: uppercase; }
+
+.mobile-app-section .content-box {
+  -webkit-box-shadow: none;
+  box-shadow: none; }
+
+.mobile-app-section .mobile-app-section__banner {
+  position: relative;
+  z-index: -1;
+  padding-bottom: 2rem; }
+  .mobile-app-section .mobile-app-section__banner img {
+    position: relative;
+    display: block;
+    z-index: 1;
+    padding-right: 5rem; }
+  .mobile-app-section .mobile-app-section__banner .price-tag__wrapper {
+    background: #6454E3;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    position: absolute;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    width: 6rem;
+    height: 6rem;
+    position: absolute;
+    right: 0;
+    top: 35%;
+    -webkit-transform: translate(0, -50%) rotate(20deg);
+    -ms-transform: translate(0, -50%) rotate(20deg);
+    transform: translate(0, -50%) rotate(20deg); }
+    .mobile-app-section .mobile-app-section__banner .price-tag__wrapper p {
+      -webkit-box-flex: 1;
+      -webkit-flex: 1;
+      -ms-flex: 1;
+      flex: 1;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-flow: column;
+      -ms-flex-flow: column;
+      flex-flow: column;
+      -webkit-box-pack: center;
+      -webkit-justify-content: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+      -ms-flex-align: center;
+      align-items: center;
+      margin: 0;
+      color: #FFF; }
+      .mobile-app-section .mobile-app-section__banner .price-tag__wrapper p .price-tag {
+        font-size: 2rem;
+        line-height: 1;
+        font-weight: bold;
+        color: #FFF;
+        padding: 0 0.5rem; }

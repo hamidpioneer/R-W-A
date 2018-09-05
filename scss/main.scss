@@ -24,6 +24,12 @@
     font-size: $font-size-large;
     margin-bottom: $spacer-medium;
 }
+.pre-heading {
+    font-size: $font-size-small;
+    font-weight: $font-normal;
+    margin-bottom: $spacer-small;
+    color: $text-color-dark-lightgray;
+}
 // End General Styles
 
 
@@ -351,15 +357,71 @@
        
     }
 }
-
-
-
-
-
-
-
-
-
-
-
 // End Feature Section
+
+
+
+
+// Start Mobile App Section
+.mobile-app-section{
+
+    .content-box {
+
+       box-shadow: none;
+
+       .hero-section__banner {
+            img {
+                // max-width: 100%;
+            }
+       }
+       
+    }
+
+    .mobile-app-section__banner {
+        position: relative;
+        z-index: -1;
+        padding-bottom: 2rem;
+
+        img {
+            position: relative;
+            display: block;
+            z-index: 1;
+            padding-right: 5rem;
+        }
+        
+        .price-tag__wrapper {
+            background: $color-primary;
+            border-radius: 50%;
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 6rem;
+            height: 6rem;
+            position: absolute;
+            right: 0;
+            top: 35%;
+            transform: translate(0, -50%) rotate(20deg);
+    
+            p {
+                flex: 1;
+                display: flex;
+                flex-flow: column;
+                justify-content: center;
+                align-items: center;
+                margin: 0;
+                color: $text-color-light;
+    
+                .price-tag {
+                    font-size: $font-size-xx-large;
+                    line-height: 1;
+                    font-weight: bold;
+                    color: $text-color-light;
+                    padding: 0 $spacer-small;
+                }
+            }
+        }
+    }
+}
+
+// End Mobile App Section
