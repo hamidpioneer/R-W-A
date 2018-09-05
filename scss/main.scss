@@ -13,22 +13,26 @@
 .section-padding {
     padding-top: 3rem;
     padding-bottom: 3rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    // border: 1px solid red;
+    text-align: center;
 }
 
+.section-heading {
+    margin-bottom: $spacer-large;
+}
 
+.heading {
+    font-size: $font-size-large;
+    margin-bottom: $spacer-medium;
+}
 // End General Styles
 
 
 
 // Start Hero Area
-.hero-area {
-    // border: 2px solid red;
-    // height: 100vh;
+.hero-section {
+    padding-bottom: 3rem;
     text-align: center;
-    color: $text-color-light-gray;
+    color: $text-color-light;
     &::before {
         background: $color-primary;
         background-repeat: no-repeat;
@@ -40,7 +44,7 @@
         top: 0;
         left: 0;
         width: 100%;
-        height: 10%;
+        height: 20%;
     }
     &::after {
         background: url("../img/elements/top-1.png");
@@ -50,7 +54,7 @@
         content: "";
         position: absolute;
         z-index: -2;
-        top: 10%;
+        top: 20%;
         left: -10%;
         right: 0;
         height: 100%;
@@ -87,16 +91,16 @@
 
     }
 
-    .hero-area__full-height {
+    .hero-section__full-height {
         position: relative;
         height: 100vh;
-        padding-top: 3rem;
-        padding-bottom: 3rem;
+        // padding-top: 3rem;
+        // padding-bottom: 3rem;
         // border: 2px solid blue;
-        .hero-area__top {
-            position: relative;
-            z-index: 1;
-            overflow: hidden;
+        .hero-section__top {
+            // position: relative;
+            // z-index: 1;
+            // overflow: hidden;
             // padding-bottom: 2rem;
 
             .hero-text {
@@ -105,43 +109,43 @@
                 padding-right: 10%;
             }
         }
-        .hero-area__bottom {
-
-            .hero-image__wrapper {
+        .hero-section__bottom {
+            max-height: 100%;
+            position: relative;
+            z-index: 1;
+            .hero-section__banner {
+                // margin-bottom: -1rem;
                 img {
-                    position:  absolute;
-                    max-height: 60vh;
-                    bottom:  0;
-                    height:  100%;
                     max-width: 100%;
-                    &:nth-child(1) {
-                        left: auto;
-                        right: 48%;
-                        transform: scale(.8) rotate(-10deg);
-                    }
-
-                    &:nth-child(2) {
-                        right: auto;
-                        left: 48%;
-                        transform:  rotate(10deg);
-                    }
+                    max-height: 60vh;
+                    // display: block;
+                    // margin: 0 auto;
+                    // bottom: 1rem;
+                    // position: relative;
                 }
             }
+            
         }
 
 
     }
 
-    .hero-area__btns {
-        display: flex;
-        flex-flow: column wrap;
-        align-items: stretch;
-        justify-content: center;
+    .btn__wrapper {
+        // display: flex;
+        // flex-flow: column wrap;
         span {
             display: block;
-            margin-top: $spacer-large;
-            margin-bottom: $spacer-large;
-            
+            margin-top: $spacer-medium;
+            margin-bottom: $spacer-medium;
+            color: $text-color-dark-gray;
+        }
+
+        .btn {
+            img {
+                max-width: 2rem;
+                max-height: 1rem;
+                margin-left: $spacer-small;
+            }
         }
     }
 
@@ -177,9 +181,10 @@
         }  
         &::after {
             @include before-after();
-            background: url("/img/Others/texture__social-icons.png");
+            background: url("/img/Elements/MediaSectionOverlapIcon.png");
+            background-size: contain;
             z-index: -1;
-            opacity: .05;
+            opacity: 1;
         }  
         &.text-light {
             color: $text-color-light !important;   
@@ -201,9 +206,19 @@
 
 
 
+// Start Media Section
+.media-section {
+    .content-box::after {
+        background: url("/img/Elements/MediaSectionOverlapIcon.png");
+    }     
+}
+// End Media Section
+
+
+
 
 // Start Support Area
-.support-area {
+.support-section {
     .content-box {
         box-shadow: none;
         overflow: initial;
@@ -247,3 +262,13 @@
     }
 }
 // End Support Area
+
+
+
+// Start Customization Section
+.custom-section {
+    .content-box::after {
+        background-image: url("/img/Elements/CustomizeSectionOverlapIcon.png");
+    }  
+}
+// End Customization Section

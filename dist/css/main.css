@@ -1,13 +1,3 @@
-.section-padding {
-  text-align: center; }
-
-.section-heading {
-  margin-bottom: 2rem; }
-
-.heading {
-  font-size: 1.2rem;
-  margin-bottom: 1rem; }
-
 html, body {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -54,21 +44,16 @@ textarea {
   padding: 1rem;
   margin-bottom: 1rem; }
 
-.section-padding {
-  text-align: center; }
-
-.section-heading {
-  margin-bottom: 2rem; }
-
-.heading {
-  font-size: 1.2rem;
-  margin-bottom: 1rem; }
-
 .site-btn--light, .site-btn--dark {
   font-size: 1rem;
   text-transform: initial !important;
   -webkit-border-radius: .25rem;
-  border-radius: .25rem; }
+  border-radius: .25rem;
+  -webkit-box-shadow: 0 2px 3px rgba(0, 0, 0, 0.02), 0 3px 5px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.02), 0 3px 5px rgba(0, 0, 0, 0.05);
+  -webkit-transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  -o-transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); }
 
 .site-btn--light {
   background-color: #FFF;
@@ -80,16 +65,29 @@ textarea {
   background-color: #6454E3;
   color: #FFF !important; }
 
+.site-btn--abs {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: auto; }
+
 .section-padding {
   padding-top: 3rem;
   padding-bottom: 3rem;
-  padding-left: 1rem;
-  padding-right: 1rem; }
+  text-align: center; }
 
-.hero-area {
+.section-heading {
+  margin-bottom: 2rem; }
+
+.heading {
+  font-size: 1.2rem;
+  margin-bottom: 1rem; }
+
+.hero-section {
+  padding-bottom: 3rem;
   text-align: center;
-  color: rgba(42, 11, 11, 0.84); }
-  .hero-area::before {
+  color: #FFF; }
+  .hero-section::before {
     background: #6454E3;
     background-repeat: no-repeat;
     background-position: top top;
@@ -101,8 +99,8 @@ textarea {
     top: 0;
     left: 0;
     width: 100%;
-    height: 10%; }
-  .hero-area::after {
+    height: 20%; }
+  .hero-section::after {
     background: url("../img/elements/top-1.png");
     background-repeat: no-repeat;
     background-position: top center;
@@ -111,25 +109,25 @@ textarea {
     content: "";
     position: absolute;
     z-index: -2;
-    top: 10%;
+    top: 20%;
     left: -10%;
     right: 0;
     height: 100%;
     min-height: 100px; }
-  .hero-area .branding {
+  .hero-section .branding {
     margin-bottom: 1rem; }
-    .hero-area .branding img {
+    .hero-section .branding img {
       max-width: 3.5rem; }
-    .hero-area .branding h1 {
+    .hero-section .branding h1 {
       color: #FFF;
       font-family: "Montserrat", sans-serif;
       font-weight: 300;
       font-size: 1.5rem;
       margin: 0;
       line-height: 1; }
-      .hero-area .branding h1 span {
+      .hero-section .branding h1 span {
         font-weight: 700; }
-    .hero-area .branding .version {
+    .hero-section .branding .version {
       color: #261F1F;
       background: #FFF;
       font-size: 0.6rem;
@@ -139,59 +137,29 @@ textarea {
       padding: .0125rem .5rem;
       margin: 0;
       text-transform: lowercase; }
-  .hero-area .hero-area__full-height {
+  .hero-section .hero-section__full-height {
     position: relative;
-    height: 100vh;
-    padding-top: 3rem;
-    padding-bottom: 3rem; }
-    .hero-area .hero-area__full-height .hero-area__top {
+    height: 100vh; }
+    .hero-section .hero-section__full-height .hero-section__top .hero-text {
+      color: #FFF;
+      padding-left: 10%;
+      padding-right: 10%; }
+    .hero-section .hero-section__full-height .hero-section__bottom {
+      max-height: 100%;
       position: relative;
-      z-index: 1;
-      overflow: hidden; }
-      .hero-area .hero-area__full-height .hero-area__top .hero-text {
-        color: #FFF;
-        padding-left: 10%;
-        padding-right: 10%; }
-    .hero-area .hero-area__full-height .hero-area__bottom .hero-image__wrapper img {
-      position: absolute;
-      max-height: 60vh;
-      bottom: 0;
-      height: 100%;
-      max-width: 100%; }
-      .hero-area .hero-area__full-height .hero-area__bottom .hero-image__wrapper img:nth-child(1) {
-        left: auto;
-        right: 48%;
-        -webkit-transform: scale(0.8) rotate(-10deg);
-        -ms-transform: scale(0.8) rotate(-10deg);
-        transform: scale(0.8) rotate(-10deg); }
-      .hero-area .hero-area__full-height .hero-area__bottom .hero-image__wrapper img:nth-child(2) {
-        right: auto;
-        left: 48%;
-        -webkit-transform: rotate(10deg);
-        -ms-transform: rotate(10deg);
-        transform: rotate(10deg); }
-  .hero-area .hero-area__btns {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -webkit-flex-flow: column wrap;
-    -ms-flex-flow: column wrap;
-    flex-flow: column wrap;
-    -webkit-box-align: stretch;
-    -webkit-align-items: stretch;
-    -ms-flex-align: stretch;
-    align-items: stretch;
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-    -ms-flex-pack: center;
-    justify-content: center; }
-    .hero-area .hero-area__btns span {
-      display: block;
-      margin-top: 2rem;
-      margin-bottom: 2rem; }
+      z-index: 1; }
+      .hero-section .hero-section__full-height .hero-section__bottom .hero-section__banner img {
+        max-width: 100%;
+        max-height: 60vh; }
+  .hero-section .btn__wrapper span {
+    display: block;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    color: rgba(0, 0, 0, 0.54); }
+  .hero-section .btn__wrapper .btn img {
+    max-width: 2rem;
+    max-height: 1rem;
+    margin-left: 0.5rem; }
 
 .content-box {
   -webkit-border-radius: .25rem;
@@ -233,9 +201,11 @@ textarea {
       left: 0;
       width: 100%;
       height: 100%;
-      background: url("/img/Others/texture__social-icons.png");
+      background: url("/img/Elements/MediaSectionOverlapIcon.png");
+      -webkit-background-size: contain;
+      background-size: contain;
       z-index: -1;
-      opacity: .05; }
+      opacity: 1; }
     .content-box.color-bg.text-light {
       color: #FFF !important; }
       .content-box.color-bg.text-light .heading {
@@ -245,7 +215,10 @@ textarea {
   .content-box .site-btn--light {
     margin-top: 1rem; }
 
-.support-area .content-box {
+.media-section .content-box::after {
+  background: url("/img/Elements/MediaSectionOverlapIcon.png"); }
+
+.support-section .content-box {
   -webkit-box-shadow: none;
   box-shadow: none;
   overflow: initial;
@@ -253,7 +226,7 @@ textarea {
   grid-template-columns: 1fr 1fr 1fr;
   gird-template-rows: auto;
   grid-gap: 1rem; }
-  .support-area .content-box .support-item {
+  .support-section .content-box .support-item {
     dispaly: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -278,24 +251,27 @@ textarea {
     -webkit-transition: all .33s ease-in-out;
     -o-transition: all .33s ease-in-out;
     transition: all .33s ease-in-out; }
-    .support-area .content-box .support-item:hover {
+    .support-section .content-box .support-item:hover {
       background-color: #6454E3;
       -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
       box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
       -webkit-transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
       -o-transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
       transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); }
-      .support-area .content-box .support-item:hover i.fa {
+      .support-section .content-box .support-item:hover i.fa {
         color: #FFF; }
-      .support-area .content-box .support-item:hover span {
+      .support-section .content-box .support-item:hover span {
         color: #FFF; }
-    .support-area .content-box .support-item i.fa {
+    .support-section .content-box .support-item i.fa {
       font-size: 2rem;
       color: #6454E3;
       -webkit-transform: rotate(90deg);
       -ms-transform: rotate(90deg);
       transform: rotate(90deg); }
-    .support-area .content-box .support-item span {
+    .support-section .content-box .support-item span {
       display: block;
       margin-top: 0.5rem;
       font-size: 0.8rem; }
+
+.custom-section .content-box::after {
+  background-image: url("/img/Elements/CustomizeSectionOverlapIcon.png"); }

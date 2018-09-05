@@ -12,6 +12,7 @@
     font-size: $font-size-normal;
     text-transform: initial !important;
     @include border-radius();
+    @include box-shadow(.5);
 }
 
 .site-btn--light {
@@ -29,8 +30,14 @@
     color: $text-color-light !important;
 }
 
-.site-btn__support-btn--light {
+.site-btn--abs {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: auto;
+}
 
+.site-btn__support-btn--light {
 
 
 }
