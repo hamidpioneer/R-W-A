@@ -30,7 +30,8 @@
 
 // Start Hero Area
 .hero-section {
-    padding-bottom: 3rem;
+    padding-top: $spacer-medium;
+    padding-bottom: $spacer-x-large;
     text-align: center;
     color: $text-color-light;
     &::before {
@@ -57,7 +58,7 @@
         top: 20%;
         left: -10%;
         right: 0;
-        height: 100%;
+        height: 30%;
         min-height: 100px;
     }
 
@@ -135,7 +136,7 @@
         // flex-flow: column wrap;
         span {
             display: block;
-            margin-top: $spacer-medium;
+            // margin-top: $spacer-medium;
             margin-bottom: $spacer-medium;
             color: $text-color-dark-gray;
         }
@@ -272,3 +273,93 @@
     }  
 }
 // End Customization Section
+
+
+
+
+// Start Feature Section
+.feature-section{
+    
+    .section-heading {
+        margin-bottom: $spacer-medium;
+    }
+
+    .content-box {
+       display: flex;
+       flex-direction: row;
+       flex-wrap: wrap;
+
+       box-shadow: none;
+
+
+       .feature-item {    
+            flex: 0 0 21%;
+            margin: $spacer-medium 2%;
+            margin-bottom: 0;
+            display: flex;
+            flex-flow: column wrap;     
+            @include border-radius();
+
+            &:hover {
+                @include box-shadow();
+            }
+
+            .feature-item__icon {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex: 1;
+            
+                i, img  {
+                    line-height: 1;
+                    width: 3rem;
+                    height: 3rem;
+                    font-size: 3rem;
+                    max-width: 3rem;
+                    max-height: 3rem;
+                    color: $text-color-primary;
+                }
+            }
+
+            .feature-item__text {
+                flex: 1;
+                display: flex;
+                flex-flow: column nowrap;
+                align-items: center;
+                justify-content: flex-start;
+            
+                .feature-item__text__category {
+                    font-size: $font-size-xxx-small;
+                    word-break: break-word;
+                    margin-top: $spacer-small;
+                    margin-bottom: 0;
+                    color: $text-color-dark-lightgray;
+                    text-transform: uppercase;
+                }
+                
+                .feature-item__text__title {
+                    font-size: $font-size-xx-small;
+                    color: $text-color-primary;
+                    margin: 0;
+                    word-break: break-word;
+                    text-overflow: ellipsis;
+                    margin-top: $spacer-x-small;
+                    text-transform: uppercase;
+                }
+            }
+        }
+       
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+// End Feature Section
