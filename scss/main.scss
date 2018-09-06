@@ -40,6 +40,7 @@
     padding-bottom: $spacer-x-large;
     text-align: center;
     color: $text-color-light;
+    overflow: hidden;
     &::before {
         background: $color-primary;
         background-repeat: no-repeat;
@@ -54,7 +55,7 @@
         height: 20%;
     }
     &::after {
-        background: url("../img/elements/top-1.png");
+        background: url("../img/Elements/top-1.png");
         background-repeat: no-repeat;
         background-position: top center;
         background-size: contain;
@@ -117,9 +118,19 @@
             }
         }
         .hero-section__bottom {
+            // max-height: 100%;
+            // position: relative;
+            // z-index: 1;
+
+            //
             max-height: 100%;
             position: relative;
             z-index: 1;
+            position: absolute;
+            left: 0;
+            width: 100%;
+            bottom: 2rem;
+            //
             .hero-section__banner {
                 // margin-bottom: -1rem;
                 img {
@@ -229,12 +240,15 @@
     .content-box {
         box-shadow: none;
         overflow: initial;
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        gird-template-rows: auto;
-        grid-gap: $spacer-medium;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-around;
+        align-items: center;
+
         .support-item {
             dispaly: flex;
+            flex: 1 31.33%;
+            margin: 1%;
             flex-flow: column wrap;
             justify-content: center;
             align-items: center;
@@ -424,6 +438,35 @@
 
 
 
+// Start Related Section
+.related-section {
+    .content-box {
+        &.color-bg {
+            &::after {
+                content: none;
+            }
+        }
+        img {
+            max-height: 3rem;
+        }
+        .related-section__banner {
+            img {
+                max-height: 100%;
+            }
+        }
+        .btn {
+            margin: 0 auto !important;
+            bottom: 2rem;
+            width: 70%;
+            left: 15%;
+            padding: .5rem 0;
+        }
+    }
+}
+// End Related Section
+
+
+
 
 // Start Footer Section
 .footer-section {
@@ -432,13 +475,6 @@
     padding-bottom: 3rem;
     text-align: center;
     color: $text-color-dark-lightgray;
-    
-// .pre-heading {
-//     font-size: $font-size-small;
-//     font-weight: $font-normal;
-//     margin-bottom: $spacer-small;
-//     color: $text-color-dark-lightgray;
-// };
 
     .footer-logo {
         h1 {
@@ -454,7 +490,7 @@
                 margin-bottom: $spacer-large;
                 color: $link-color-dark;
                 img {
-                    max-height: $spacer-x-large;
+                    max-height: $spacer-large;
                 }
                 span {
                     font-size: $font-size-x-small;
@@ -482,9 +518,10 @@
         display: flex;
         flex-flow: row wrap;
         align-items: center;
-        justify-content: space-evenly;
+        justify-content: center;
         margin-bottom: 1.5rem;
         li {
+            @include transition();
             a {
                 display: flex;
                 align-items: center;
@@ -499,12 +536,25 @@
                 padding: $spacer-xx-small;
                 margin: $spacer-small;
             }
+
+            &:hover {
+                transform: scale(1.2);
+                a {
+                    background: $color-light;
+                    color: $text-color-primary !important;
+                    @include box-shadow();
+                }
+            }
         }
     }
 
     .footer-link {
-        font-size: $font-size-xx-small;
+        font-size: $font-size-x-small;
         color: $link-color-dark !important;
+        @include transition();
+        &:hover {
+            text-decoration: underline !important;
+        }
     }
 
 }
