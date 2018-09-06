@@ -558,7 +558,106 @@
     }
 
 }
-
-
-
 // End Footer Section
+
+
+// Start Owl-Carousel
+
+    // Start General Owl-Carousel
+.owl-carousel {
+    img {
+        width: auto !important;
+        margin: 0 auto !important;
+    }
+
+    .owl-controls {
+
+        .owl-dots {
+            position: absolute;
+            left: 0;
+            width: 100%;
+            top: 100%;
+    
+            div {
+                width: .8rem;
+                height: .8rem;
+                margin: 10px;
+                background: transparent;
+                display: inline-block;
+                border-radius: 50%;
+                border: 1px solid $color-primary;
+                transition: all .3s ease-in-out;
+    
+                &.active {
+                    background: $color-primary;
+                }
+            }
+        }
+    
+    
+        .owl-nav {
+    
+            &>div {
+                position: absolute;
+                background: rgba($color-light, 0);
+                color: $text-color-dark;
+                font-size: 2rem;
+                padding: 1%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                top: 0;
+                height: 100%;
+                opacity: .25;
+                @include transition();
+    
+                &:hover {
+                    opacity: 1;
+                    background: rgba($color-light, .5);
+                }
+            }
+    
+            .owl-prev {
+                left: 0;
+                right: auto;
+                i.fa {
+                    left: -15px !important;
+                    position: relative;
+                    @include transition();
+                }
+                &:hover {
+                    padding-right: 3%;
+                    i.fa {
+                        left: 0 !important;
+                    }
+                }
+                
+            }
+            .owl-next {
+                right: 0;
+                left: auto;
+                i.fa {
+                    right: -15px !important;
+                    position: relative;
+                    @include transition();
+                }
+                &:hover {
+                    padding-left: 3%;
+                    i.fa {
+                        right: 0 !important;
+                    }
+                }
+            }
+        }
+        
+    }
+}
+
+
+
+
+
+    // End General Owl-Carousel
+
+
+// End Owl-Carousel

@@ -599,3 +599,83 @@ ul {
     transition: all .33s ease-in-out; }
     .footer-section .footer-link:hover {
       text-decoration: underline !important; }
+
+.owl-carousel img {
+  width: auto !important;
+  margin: 0 auto !important; }
+
+.owl-carousel .owl-controls .owl-dots {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  top: 100%; }
+  .owl-carousel .owl-controls .owl-dots div {
+    width: .8rem;
+    height: .8rem;
+    margin: 10px;
+    background: transparent;
+    display: inline-block;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    border: 1px solid #6454E3;
+    -webkit-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out; }
+    .owl-carousel .owl-controls .owl-dots div.active {
+      background: #6454E3; }
+
+.owl-carousel .owl-controls .owl-nav > div {
+  position: absolute;
+  background: rgba(255, 255, 255, 0);
+  color: #261F1F;
+  font-size: 2rem;
+  padding: 1%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  top: 0;
+  height: 100%;
+  opacity: .25;
+  -webkit-transition: all .33s ease-in-out;
+  -o-transition: all .33s ease-in-out;
+  transition: all .33s ease-in-out; }
+  .owl-carousel .owl-controls .owl-nav > div:hover {
+    opacity: 1;
+    background: rgba(255, 255, 255, 0.5); }
+
+.owl-carousel .owl-controls .owl-nav .owl-prev {
+  left: 0;
+  right: auto; }
+  .owl-carousel .owl-controls .owl-nav .owl-prev i.fa {
+    left: -15px !important;
+    position: relative;
+    -webkit-transition: all .33s ease-in-out;
+    -o-transition: all .33s ease-in-out;
+    transition: all .33s ease-in-out; }
+  .owl-carousel .owl-controls .owl-nav .owl-prev:hover {
+    padding-right: 3%; }
+    .owl-carousel .owl-controls .owl-nav .owl-prev:hover i.fa {
+      left: 0 !important; }
+
+.owl-carousel .owl-controls .owl-nav .owl-next {
+  right: 0;
+  left: auto; }
+  .owl-carousel .owl-controls .owl-nav .owl-next i.fa {
+    right: -15px !important;
+    position: relative;
+    -webkit-transition: all .33s ease-in-out;
+    -o-transition: all .33s ease-in-out;
+    transition: all .33s ease-in-out; }
+  .owl-carousel .owl-controls .owl-nav .owl-next:hover {
+    padding-left: 3%; }
+    .owl-carousel .owl-controls .owl-nav .owl-next:hover i.fa {
+      right: 0 !important; }
