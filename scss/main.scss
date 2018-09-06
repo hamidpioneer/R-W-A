@@ -285,6 +285,7 @@
 
 // Start Feature Section
 .feature-section{
+    padding-top: 2rem;
     
     .section-heading {
         margin-bottom: $spacer-medium;
@@ -296,6 +297,7 @@
        flex-wrap: wrap;
 
        box-shadow: none;
+       padding-bottom: 1rem;
 
 
        .feature-item {    
@@ -402,26 +404,111 @@
             right: 0;
             top: 35%;
             transform: translate(0, -50%) rotate(20deg);
+
+            margin: 0;
+            color: $text-color-light;
+            flex-flow: column;
     
-            p {
-                flex: 1;
+            .price-tag {
+                font-size: $font-size-xx-large;
+                line-height: 1;
+                font-weight: bold;
+                color: $text-color-light;
+                padding: 0 $spacer-small;
+            }
+            
+        }
+    }
+}
+// End Mobile App Section
+
+
+
+
+// Start Footer Section
+.footer-section {
+
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    text-align: center;
+    color: $text-color-dark-lightgray;
+    
+// .pre-heading {
+//     font-size: $font-size-small;
+//     font-weight: $font-normal;
+//     margin-bottom: $spacer-small;
+//     color: $text-color-dark-lightgray;
+// };
+
+    .footer-logo {
+        h1 {
+            line-height: 1;
+            margin: 0;
+            position: relative;
+            color: $link-color-dark;
+            a {
                 display: flex;
                 flex-flow: column;
-                justify-content: center;
                 align-items: center;
-                margin: 0;
-                color: $text-color-light;
-    
-                .price-tag {
-                    font-size: $font-size-xx-large;
-                    line-height: 1;
-                    font-weight: bold;
-                    color: $text-color-light;
-                    padding: 0 $spacer-small;
+                justify-content: center;
+                margin-bottom: $spacer-large;
+                color: $link-color-dark;
+                img {
+                    max-height: $spacer-x-large;
+                }
+                span {
+                    font-size: $font-size-x-small;
+                    margin-top: $spacer-x-small;
+                    color: $link-color-dark;
                 }
             }
         }
     }
+
+    .section-heading {
+
+        p {
+            font-size: $font-size-small;
+            font-weight: $font-normal;
+            color: $text-color-dark-lightgray;
+
+           &:last-of-type {
+               margin-bottom: 0;
+            }
+       }
+    }
+
+    .social-links {
+        display: flex;
+        flex-flow: row wrap;
+        align-items: center;
+        justify-content: space-evenly;
+        margin-bottom: 1.5rem;
+        li {
+            a {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 24px;
+                height: 24px;
+                font-size: 18px;
+                line-height: 1;
+                @include border-radius();
+                background: $color-primary;
+                color: $text-color-light !important;
+                padding: $spacer-xx-small;
+                margin: $spacer-small;
+            }
+        }
+    }
+
+    .footer-link {
+        font-size: $font-size-xx-small;
+        color: $link-color-dark !important;
+    }
+
 }
 
-// End Mobile App Section
+
+
+// End Footer Section
