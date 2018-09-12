@@ -679,3 +679,8 @@ ul {
     padding-left: 3%; }
     .owl-carousel .owl-controls .owl-nav .owl-next:hover i.fa {
       right: 0 !important; }
+
+.document__container {
+  padding: 1rem;
+  background-color: red;
+  border: 1px solid yellow; }
