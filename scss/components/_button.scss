@@ -26,7 +26,7 @@
 
 .site-btn--dark {
     @extend %site-btn--shared;
-    background-color: $color-primary;
+    background-color: $color-primary !important;
     color: $text-color-light !important;
 }
 

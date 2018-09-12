@@ -51,6 +51,6 @@
     border-radius: .25rem;
   }
 
-  @mixin transition() {
-    transition: all .33s ease-in-out;
+  @mixin transition($value: .33s) {
+    transition: all $value ease-in-out;
   }
