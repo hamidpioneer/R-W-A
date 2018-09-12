@@ -12,8 +12,3 @@ $( document ).ready(function() {
     });
 
 });
-
-window.ready() {
-    
-    document.getElementById("hero-input-btn").innerHTML = "Hello";
-}
