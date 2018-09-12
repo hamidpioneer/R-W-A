@@ -652,19 +652,102 @@
         
     }
 }
-
-
-
-
-
     // End General Owl-Carousel
+
+
+
+    // Start Custom Owl-Carousel Pre-Next item
+    .slider-section {
+        overflow: hidden;
+        
+        .owl-carousel.owl-loaded{
+            padding-bottom: $spacer-large;
+
+            .owl-stage-outer {
+                overflow: inherit;
+    
+                .owl-stage {
+                    display: flex;
+                    flex-flow: row nowrap;
+                    justify-content: center;
+                    align-items: flex-start;
+                    height: 100%;
+                    overflow: inherit;
+                    padding: $spacer-small;
+    
+                    .owl-item {
+    
+                        border-radius: $spacer-medium;
+                        overflow: hidden;
+                        @include box-shadow();
+    
+                        &::after {
+                            content: "";
+                            position: absolute;
+                            left: 0;
+                            right: 0;
+                            top: 0;
+                            bottom: 0;
+                            background: $color-primary;
+                            z-index: 1;
+                            opacity: 1;
+                        }
+                        
+                        &.active{
+                            &::after {
+                                opacity: 0;
+                                z-index: -1;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        // Slider NEXT/PREV item design
+        .owl-item { // for LEFT item
+            @include transition();
+
+            margin-right: 5px !important;
+            margin-left: 0 !important;
+
+            &.active { // for CENTER/ACTIVE item
+                margin-right: 0 !important;
+                margin-left: 0 !important;
+            }
+
+            &.active+.owl-item {
+                // for RIGHT item
+                margin-right: 0 !important;
+                margin-left: 5px !important;
+            }
+
+            &:not(.active) {
+                top: 15px;
+                bottom: 15px;
+            }
+        }
+
+    }
+    // End Custom Owl-Carousel Pre-Next item
+
+
 
 
 // End Owl-Carousel
 
-    .document__container {
-        padding: 1rem;
-        background-color: red;
-        border: 1px solid yellow;
 
-    }
+// start test purpose
+.document__container {
+    padding: 1rem;
+    background-color: rgba(red, .5);
+    border: 1px solid yellow;
+    
+}
+// end test purpose
+
+    
+
+    
+
+    
