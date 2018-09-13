@@ -9,6 +9,114 @@
 @import 'helpers/mixins';
 // @import 'helpers/variables';
 
+// start Custom-form-input
+.custom-form-input{
+    background-color: $color-primary;
+    padding: $spacer-medium;
+
+    @include border-radius();
+    @include box-shadow();
+
+    form {
+
+        position: relative;
+        z-index: 1;
+        // background: rgba(0, 0, 0, .1);
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: center;
+        align-items: center;
+        height: 36px;
+
+        .input-group {
+            position: relative;
+            margin: 40px auto;
+        }
+
+        .form-control {
+            position: relative;
+            z-index: 1;
+            width: 100%;
+            height: 36px;
+            font-size: 16px;
+            border: 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.85);
+            background-color: transparent;
+            padding-right: 40px;
+            margin-right: 36px;
+            padding-left: 16px;
+            color: $text-color-light;
+
+            & + label {
+                position: absolute;
+                top: 10px;
+                left: 3px;
+                font-size: 16px;
+                color: rgba(0, 0, 0, .60);
+                transition: all .2s ease-out;
+            }
+
+            &:focus {
+                outline: 0 !important;
+                border-width: 0px;
+                border-color: $color-primary;
+                box-shadow: none;
+                transition: all .2s ease-out;
+                background-color: rgba(255,255,255,.1);
+            }
+            &:focus + label, 
+            &.has-value + label {
+                top: -15px;
+                color: $text-color-light;
+                font-size: 12px;
+            }
+
+            &.has-value:not(:focus) + label {
+                color: rgba($text-color-light, .6);
+            }
+        }
+
+        button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            top: 0;
+            right: 0;
+            height: 36px;
+            width: 36px;
+            padding: 0 16px;
+            background-color: $color-light;
+            color: $text-color-dark;
+            font-size: 14px;
+            text-transform: uppercase;
+            font-weight: 500;
+            border: 1px solid $color-primary;
+            z-index: 5;
+            cursor: pointer;
+            @include transition();
+
+            &:hover {
+                background-color: $text-color-dark;
+                color: $color-light;
+            }
+
+            
+            
+
+        }
+
+        textarea.form-control {
+            height: 120px;
+
+        }
+
+
+    }
+
+}
+// End Custom-form-input
+
 // Start General Styles
 .section-padding {
     padding-top: 3rem;
@@ -39,7 +147,7 @@
 // Start Hero Area
 .hero-section {
     background-color: rgba(255,0,0,.2);
-    
+
     padding-top: $spacer-medium;
     padding-bottom: $spacer-x-large;
     text-align: center;
