@@ -131,7 +131,7 @@ ul {
         content: "";
         position: absolute;
         background: #6454E3;
-        bottom: 50px;
+        bottom: 48px;
         top: 0;
         left: 0;
         right: 0; }
@@ -814,7 +814,8 @@ ul {
       padding: 0 0.5rem; }
   @media all and (orientation: landscape) {
     .price-section .price-section__banner img {
-      padding-right: 10rem; }
+      padding-right: 10rem;
+      margin: 0 auto; }
     .price-section .price-section__banner .price-tag__wrapper {
       width: 10rem;
       height: 10rem; } }
