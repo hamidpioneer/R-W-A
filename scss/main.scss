@@ -991,8 +991,8 @@
             @include transition();
 
             &:not(.active) {
-                visibility: hidden;
-                opacity: 0;
+                // visibility: hidden;
+                // opacity: 0;
             }
             
             &.active {
@@ -1001,7 +1001,7 @@
 
                 &::after,
                 &::before {
-                    content: "";
+                    // content: "";
                     top: 5%;
                     bottom: 5%;
                     background: $color-primary;

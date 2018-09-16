@@ -980,14 +980,10 @@ ul {
       -webkit-transition: all 0.33s ease-in-out;
       -o-transition: all 0.33s ease-in-out;
       transition: all 0.33s ease-in-out; }
-      .special-slider-section .owl-stage-outer .owl-item:not(.active) {
-        visibility: hidden;
-        opacity: 0; }
       .special-slider-section .owl-stage-outer .owl-item.active {
         position: relative;
         z-index: 1; }
         .special-slider-section .owl-stage-outer .owl-item.active::after, .special-slider-section .owl-stage-outer .owl-item.active::before {
-          content: "";
           top: 5%;
           bottom: 5%;
           background: #6454E3;
