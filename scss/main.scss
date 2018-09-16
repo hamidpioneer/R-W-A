@@ -284,7 +284,7 @@
 
 
 
-// Start Slider Area 1
+// Start Slider Area Media-Section
 .content-box {
 
     @include border-radius();
@@ -336,6 +336,21 @@
 
     .site-btn--light {
         margin-top: $spacer-medium;
+    }
+
+    video {
+        margin: 0 auto;
+        max-width: 100%;
+        height: auto;
+    }
+    audio {
+        margin: 0 auto;
+        max-width: 100%;
+    }
+    picture {
+        margin: 0 auto;
+        max-width: 100%;
+        height: auto;
     }
 }
 

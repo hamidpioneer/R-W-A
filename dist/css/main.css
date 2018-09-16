@@ -45,7 +45,8 @@ textarea {
   margin-bottom: 1rem; }
 
 img {
-  max-width: 100%; }
+  max-width: 100%;
+  height: auto; }
 
 ul {
   margin: 0;
@@ -409,6 +410,17 @@ ul {
     font-size: 1.2rem; }
   .content-box .site-btn--light {
     margin-top: 1rem; }
+  .content-box video {
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto; }
+  .content-box audio {
+    margin: 0 auto;
+    max-width: 100%; }
+  .content-box picture {
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto; }
 
 .media-section .content-box::after {
   background: url("/img/Elements/MediaSectionOverlapIcon.png"); }
