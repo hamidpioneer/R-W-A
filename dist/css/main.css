@@ -423,7 +423,7 @@ ul {
     height: auto; }
 
 .media-section .content-box::after {
-  background: url("/img/Elements/MediaSectionOverlapIcon.png"); }
+  background: url("../img/Elements/MediaSectionOverlapIcon.png"); }
 
 .support-section-with-sub-section .section-content__sub-section {
   margin-top: 1rem; }
@@ -543,7 +543,7 @@ ul {
         font-size: 0.8rem; }
 
 .custom-section .content-box::after {
-  background-image: url("/img/Elements/CustomizeSectionOverlapIcon.png"); }
+  background-image: url("../img/Elements/CustomizeSectionOverlapIcon.png"); }
 
 .feature-section {
   padding-top: 2rem; }
