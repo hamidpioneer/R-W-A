@@ -40,10 +40,11 @@
 
 // Start Hero Section
 .hero-section {
+    // background-color: rgba(255,0,0,.2);
 
     &.site-min-full-height {
-        min-height: 100%;
-        min-height: 100vh;
+        // min-height: 100%;
+        // min-height: 100vh;
         position: relative;
         z-index: 1;
     }
@@ -74,7 +75,7 @@
                 left: 0;
                 right: 0;
                 @media all and (orientation: landscape) {
-                    bottom: 80px;
+                    bottom: 78px;
                 }
             }
 
@@ -117,9 +118,8 @@
                     line-height: $font-size-x-small;
                     border-radius: 5rem;
                     display: inline-block;
-                    padding: .0125rem .5rem;
+                    padding: $spacer-x-small $spacer-small;
                     margin: 0;
-                    text-transform: lowercase;
                 }
 
             }
@@ -133,6 +133,10 @@
     }
 
     .hero-section__bottom {
+
+        .hero-section__bottom__wrapper {
+            position: relative;
+        }
 
         position: relative;
         z-index: 1;
@@ -152,7 +156,7 @@
         .hero-section__banner {
             img {
                 max-width: 100%;
-                max-height: 350px;
+                // max-height: 550px;
                 @media all and (orientation: landscape) {
                     max-height: inherit;
                 }
@@ -162,19 +166,29 @@
 
     }
 
+
     // start Hero User Input
     .hero-user-input {
-        background-color: $color-primary;
-        padding: $spacer-medium;
+        background: $color-primary;
+        padding: $spacer-small;
+        z-index: 2 !important;
+        position: absolute;
+        left: 15px;
+        right: 15px;
+        bottom: 0;
 
+        
         @include border-radius();
         @include box-shadow();
+
+        &:hover {
+            @include box-shadow(2);
+        }
 
         form {
 
             position: relative;
             z-index: 1;
-            // background: rgba(0, 0, 0, .1);
             display: flex;
             flex-flow: row nowrap;
             justify-content: center;
@@ -183,77 +197,76 @@
 
             .input-group {
                 position: relative;
-                margin: 40px auto;
+                width: 100%;
+
+                &::before {
+                    content: "https://";
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    line-height: 1;
+                    padding-left: 8px;
+                    padding-right: 8px;
+                    text-transform: lowercase;
+                    color: rgba($color-light, .84);
+                    font-weight: $font-bold;
+                    font-size: $font-size-normal;
+                }
+                
             }
 
             .form-control {
-                position: relative;
-                z-index: 1;
-                width: 100%;
-                height: 36px;
-                font-size: 16px;
-                border: 0;
-                border-bottom: 1px solid rgba(255, 255, 255, 0.85);
-                background-color: transparent;
-                padding-right: 40px;
-                margin-right: 36px;
-                padding-left: 16px;
+                flex: 1 1 auto;
+                padding-left: 0;
                 color: $text-color-light;
+                // font-weight: $font-bold;
+                line-height: 1;
+                background: transparent;
+                letter-spacing: 1px;
+                height: 36px;
+                border: 0;
+                border-radius: 0;
 
-                &+label {
-                    position: absolute;
-                    top: 10px;
-                    left: 3px;
-                    font-size: 16px;
-                    color: $text-color-light-gray;
-                    transition: all .2s ease-out;
+                &::placeholder {
+                    color: $text-color-light;
+                    opacity: .5;
+                    line-height: 1;
+                    text-transform: lowercase;
                 }
+                
 
                 &:focus {
                     outline: 0 !important;
                     border-width: 0px;
-                    border-color: $color-primary;
                     box-shadow: none;
-                    transition: all .2s ease-out;
-                    background-color: rgba(255, 255, 255, .1);
+                    @include transition();
                 }
 
-                &:focus+label,
-                &.has-value+label {
-                    top: -15px;
-                    color: $text-color-light;
-                    font-size: 12px;
-                }
-
-                &.has-value:not(:focus)+label {
-                    color: rgba($text-color-light, .6);
-                }
+                
             }
 
             button {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                position: absolute;
-                top: 0;
-                right: 0;
-                height: 36px;
+                background-color: transparent;
                 width: 36px;
-                padding: 0 16px;
-                background-color: $color-light;
-                color: $text-color-dark;
-                font-size: 14px;
-                text-transform: uppercase;
-                font-weight: 500;
-                border: 1px solid $color-primary;
-                z-index: 5;
-                cursor: pointer;
+                height: 36px;
+                border: 0;
+                outline: 0;
+                color: $text-color-light;
+                border-radius: 50%;
                 @include transition();
-
-                &:hover {
-                    background-color: $text-color-dark;
-                    color: $color-light;
+                i.fa {
+                    font-size: $font-size-normal;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    position: relative;
                 }
+                &:hover {
+                    color: $text-color-light !important;
+                    background: rgba(255,255,255,.1);
+                    border-radius: 50%;
+                }
+
             }
             textarea.form-control {
                 height: 120px;
@@ -708,12 +721,6 @@
 
         box-shadow: none;
         overflow: inherit;
-
-        .hero-section__banner {
-            img {
-                // max-width: 100%;
-            }
-        }
 
     }
 
