@@ -355,105 +355,6 @@
 
 
 
-// Start Support Area
-.support-section {
-    .content-box {
-        box-shadow: none;
-        overflow: initial;
-        display: flex;
-        flex-flow: row wrap;
-        // justify-content: space-between;
-        align-items: center;
-        margin: -1%;
-
-        .support-item {
-            dispaly: flex;
-            flex: 0 31.333333%;
-            margin: 1%;
-            flex-flow: column wrap;
-            justify-content: center;
-            align-items: center;
-            padding: $spacer-medium 0;
-            border: 0;
-            @include box-shadow(.5);
-            @include transition();
-
-
-            @media all and (min-width: 481px) and (orientation: portrait) {
-                flex-basis: 23% !important;
-                // background: rgba(blue, .2);
-            }
-
-            @media all and (max-width: 480px) and (orientation: portrait) {
-                flex-basis: 31.3333% !important;
-                // background: rgba(black, .2);
-            }
-
-            @media all and (max-width: 360px) and (orientation: portrait) {
-                flex-basis: 48% !important;
-                // background: rgba(yellow, .2);
-            }
-
-            @media all and (min-width: 480px) and (orientation: landscape) {
-                flex-basis: 31.3333% !important;
-                // background: rgba(red, .2);
-            }
-
-            @media all and (min-width: 640px) and (orientation: landscape) {
-                flex-basis: 23% !important;
-                // background: rgba(green, .2);
-            }
-
-            &:hover {
-                background-color: $color-primary;
-                @include box-shadow();
-
-                i.fa {
-                    color: $text-color-light;
-                }
-
-                i.fa,
-                img {
-                    transform: scale(1.05);
-                }
-
-                span {
-                    color: $text-color-light;
-                }
-            }
-
-            i.fa {
-                font-size: $icon-size-medium;
-                color: $text-color-primary;
-                transform: rotate(90deg);
-                width: 3rem;
-                max-width: 3rem;
-                height: 3rem;
-                max-height: 3rem;
-                font-size: 3rem;
-                line-height: 1;
-            }
-
-            img {
-                width: 3rem;
-                max-width: 3rem;
-                height: auto;
-                max-height: 3rem;
-                font-size: 3rem;
-            }
-
-            span {
-                display: block;
-                margin-top: $spacer-small;
-                font-size: $font-size-small;
-
-            }
-        }
-    }
-}
-
-// End Support Area
-
 // Start Support Area-2
 .support-section-with-sub-section {
     .section-content__sub-section {
@@ -496,7 +397,7 @@
                 padding: $spacer-small;
                 border: 0;
                 white-space: nowrap;
-                background-color: rgba(0,0,0,.01);
+                // background-color: rgba(0,0,0,.01);
                 @include transition();
 
 
@@ -616,7 +517,7 @@
             flex-flow: column wrap;
             margin: 1%;
             padding: 1%;
-            background-color: rgba(0, 0, 0, .01);
+            // background-color: rgba(0, 0, 0, .01);
             @include border-radius();
 
             @media all and (min-width: 481px) and (orientation: portrait) {
