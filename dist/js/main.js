@@ -1,7 +1,7 @@
 $( document ).ready(function() {
     console.log( "ready!" );
 
-    $('.owl-carousel.media-section__slider, .owl-carousel.custom-section__slider, .owl-carousel.related-section__slider').owlCarousel({
+    $('.owl-carousel.media-section__slider, .owl-carousel.related-section__slider').owlCarousel({
         items: 1,
         dots: true,
         autoHeight: true,
@@ -39,3 +39,12 @@ $(function() {
     }
 });
 // Custon Form-input
+
+// upload files
+$(function () {
+    $("#upload_link").on('click', function (e) {
+        e.preventDefault();
+        $("#upload:hidden").trigger('click');
+    });
+});
+// upload files

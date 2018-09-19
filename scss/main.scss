@@ -10,6 +10,10 @@
 // @import 'helpers/variables';
 
 
+#upload {
+    display: none
+}
+
 
 
 // Start General Styles
@@ -70,25 +74,25 @@
                 content: "";
                 position: absolute;
                 background: $color-primary;
-                bottom: 48px;
+                bottom: calc(0% - 1px);
                 top: 0;
                 left: 0;
                 right: 0;
-                @media all and (orientation: landscape) {
-                    bottom: 78px;
-                }
+                // @media all and (orientation: landscape) {
+                //     bottom: 0;
+                // }
             }
 
             .hero-bg__img {
                 position: absolute;
-                top: calc(100% - 50px);
+                top: 100%;
                 left: 0;
                 width: 100%;
                 z-index: -1;
                 display: block;
-                @media all and (orientation: landscape) {
-                    top: calc(100% - 80px);
-                }
+                // @media all and (orientation: landscape) {
+                //     top: 100%;
+                // }
             }
 
             .branding {
@@ -126,8 +130,8 @@
 
             .hero-text {
                 color: $text-color-light;
-                padding-left: 15%;
-                padding-right: 15%;
+                // padding-left: 15%;
+                // padding-right: 15%;
             }
         }
     }
@@ -156,6 +160,7 @@
         .hero-section__banner {
             img {
                 max-width: 100%;
+                width: 100%;
                 // max-height: 550px;
                 @media all and (orientation: landscape) {
                     max-height: inherit;
@@ -198,6 +203,8 @@
             .input-group {
                 position: relative;
                 width: 100%;
+                font-weight: $font-normal;
+
 
                 &::before {
                     content: "https://";
@@ -206,10 +213,8 @@
                     justify-content: center;
                     line-height: 1;
                     padding-left: 8px;
-                    padding-right: 8px;
                     text-transform: lowercase;
                     color: rgba($color-light, .84);
-                    font-weight: $font-bold;
                     font-size: $font-size-normal;
                 }
                 
@@ -219,7 +224,7 @@
                 flex: 1 1 auto;
                 padding-left: 0;
                 color: $text-color-light;
-                // font-weight: $font-bold;
+                font-weight: $font-normal;
                 line-height: 1;
                 background: transparent;
                 letter-spacing: 1px;
@@ -232,6 +237,8 @@
                     opacity: .5;
                     line-height: 1;
                     text-transform: lowercase;
+                    font-weight: $font-normal;
+
                 }
                 
 
@@ -315,8 +322,8 @@
 
         &::after {
             @include before-after();
-            background: url("/img/Elements/MediaSectionOverlapIcon.png");
-            background-size: contain;
+            background: url("../img/Elements/MediaSectionOverlapIcon.png");
+            background-size: contain !important;
             z-index: -1;
             opacity: 1;
         }
@@ -360,9 +367,29 @@
 
 // Start Media Section
 .media-section {
-    .content-box::after {
-        background: url("../img/Elements/MediaSectionOverlapIcon.png");
+    .content-box{
+        &::after {
+            background: url("../img/Elements/MediaSectionOverlapIcon.png");
+        }
+
+        .text-wrapper {
+            flex: 1;
+            text-overflow: ellipsis;
+            height: 100%;
+            position: relative;
+            padding-bottom: 2rem;
+
+            .site-btn--abs {
+                bottom: 0;
+                left: 0;
+                right: 0;
+                z-index: 2;
+            }
+        }
+
     }
+
+    
 }
 
 // End Media Section
@@ -371,18 +398,18 @@
 
 
 // Start Support Area-2
-.support-section-with-sub-section {
+.support-section {
     .section-content__sub-section {
         margin-top: $spacer-medium;
 
         .sub-section__title {
             margin-bottom: 0;
             margin-top: $spacer-large;
-            padding: $spacer-small;
+            padding: .75rem;
             background-color: $color-primary;
-            color: $text-color-light;
-            font-size: $font-size-large;
-            font-weight: $font-light;
+            color: rgba($text-color-light, .84);
+            font-size: $font-size-normal;
+            font-weight: $font-bold;
             @include border-radius();
 
             &+.content-box {
@@ -395,7 +422,7 @@
             overflow: initial;
             display: flex;
             flex-flow: row wrap;
-            align-items: center;
+            align-items: stretch;
             justify-content: center;
             margin: -1%;
 
@@ -485,6 +512,8 @@
                     display: block;
                     margin-top: $spacer-small;
                     font-size: $font-size-small;
+                    white-space: normal;
+                    flex: 1 1 auto;
 
                 }
             }
@@ -520,6 +549,7 @@
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
+        justify-content: center;
 
         box-shadow: none;
         padding-bottom: 1rem;
@@ -560,15 +590,15 @@
                 // background: rgba(green, .2);
             }
 
-            &:hover {
-                @include box-shadow();
-                background-color: rgba($color-primary, .1);
+            // &:hover {
+            //     @include box-shadow();
+            //     background-color: rgba($color-primary, .1);
 
-                i.fa,
-                img {
-                    transform: scale(1.05);
-                }
-            }
+            //     i.fa,
+            //     img {
+            //         transform: scale(1.05);
+            //     }
+            // }
 
             .feature-item__icon {
                 display: flex;
@@ -643,7 +673,7 @@
     .price-section__banner {
         position: relative;
         z-index: -1;
-        padding-bottom: 2rem;
+        // padding-bottom: 2rem;
 
         img {
             position: relative;
@@ -719,14 +749,27 @@
                 content: none;
             }
         }
-
-        img {
-            max-height: 3rem;
+        
+        .content-box__top {
+            img {
+                max-height: 3rem;
+            }
         }
 
         .related-section__banner {
+            position: relative;
+            border: 2px solid red;
+            z-index: 99;
+            // flex: 1;
+            // width: 100%;
+            // height: 100%;
+            // display: flex;
+            // justify-content: center;
+            // align-items: stretch;
+            
             img {
-                max-height: 300px;
+                max-height: 100%;
+                max-width: 100%;
             }
         }
 
@@ -883,7 +926,8 @@
             position: absolute;
             left: 0;
             width: 100%;
-            top: 100%;
+            // top: 100%;
+            bottom: -3rem;
 
             div {
                 width: .8rem;
@@ -976,11 +1020,43 @@
 // Start Special Slider Previous/Next Design
 .special-slider-section {
     overflow-x: hidden;
+    padding-bottom: 3rem;
 
     .content-box {
-        min-height: 400px;
+        height: 320px;
+        display: flex;
+        flex-flow: column nowrap;
+        // justify-content: flex-start;
+        
         @media all and (orientation: landscape) {
-            min-height: 250px;
+            height: 360px;
+        }
+    }
+
+    .media-wrapper {
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        flex: 1;
+        img {
+            max-height: 200px;
+            @media all and (orientation: landscape) {
+                max-height: 250px;
+            }
+        }
+
+        .vimeo-video {
+            position: relative;
+            widows: 100%;
+            height: 100%;
+            &>div {
+                // padding-bottom: 56.25%;
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+            }
         }
     }
 
