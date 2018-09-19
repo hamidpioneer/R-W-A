@@ -38,7 +38,8 @@
     z-index: 2;
 }
 
-.site-btn__support-btn--light {
-
-
+@media all and (max-width: 319px) {
+    .btn {
+        padding: $spacer-small !important;
+    }
 }
