@@ -10,10 +10,6 @@
 // @import 'helpers/variables';
 
 
-#upload {
-    display: none
-}
-
 
 
 // Start General Styles
@@ -38,17 +34,17 @@
     margin-bottom: $spacer-small;
     color: $text-color-dark-lightgray;
 }
+#upload {
+    display: none
+}
 // End General Styles
 
 
 
 // Start Hero Section
 .hero-section {
-    // background-color: rgba(255,0,0,.2);
 
     &.site-min-full-height {
-        // min-height: 100%;
-        // min-height: 100vh;
         position: relative;
         z-index: 1;
     }
@@ -282,10 +278,6 @@
     }
     // end Hero User Input
 }
-
-@media all and (orientation: landscape) {
-
-}
 // End Hero Section
 
 
@@ -360,7 +352,6 @@
         height: auto;
     }
 }
-
 // End Slider Area 1
 
 
@@ -391,7 +382,6 @@
 
     
 }
-
 // End Media Section
 
 
@@ -521,7 +511,6 @@
         }
     }
 }
-
 // End Support Area
 
 
@@ -532,7 +521,6 @@
         background-image: url("../img/Elements/CustomizeSectionOverlapIcon.png");
     }
 }
-
 // End Customization Section
 
 
@@ -655,7 +643,6 @@
 
     }
 }
-
 // End Feature Section
 
 
@@ -737,7 +724,6 @@
         }
     }
 }
-
 // End Mobile App Section
 
 
@@ -780,7 +766,6 @@
         }
     }
 }
-
 // End Related Section
 
 
@@ -881,12 +866,6 @@
 
             &:hover {
                 transform: scale(1.2);
-
-                // a {
-                //     background: $color-light;
-                //     color: $text-color-primary !important;
-                //     @include box-shadow();
-                // }
             }
         }
     }
@@ -905,7 +884,6 @@
     }
 
 }
-
 // End Footer Section
 
 
@@ -1008,17 +986,13 @@
 
     }
 }
-
 // End General Owl-Carousel
-
-
-
-
 
 // Start Special Slider Previous/Next Design
 .special-slider-section {
     overflow-x: hidden;
     padding-bottom: 3rem;
+    margin-bottom: 1rem;
 
     .content-box {
         height: 320px;
@@ -1120,29 +1094,9 @@
 }
 // End Special Slider Previous/Next Design
 
-
-
-
-
 // End Owl-Carousel
 
 
-// start test purpose
-.document__container {
-    padding: 1rem;
-    background-color: rgba(red, .5);
-    border: 1px solid yellow;
-
-}
-
-// end test purpose
-
-// img {
-//     @include transition();
-//     &:hover {
-//         transform: scale(1.05);
-//     }
-// }
 
 
 .site-input__wrapper {
