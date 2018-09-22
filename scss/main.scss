@@ -550,7 +550,7 @@
             flex: 0 1 auto;
             flex-flow: column wrap;
             margin: 1%;
-            padding: 1%;
+            padding: 3%;
             // background-color: rgba(0, 0, 0, .01);
             @include border-radius();
 
@@ -873,13 +873,26 @@
     .footer-link {
         font-size: $font-size-x-small;
         color: $link-color-dark !important;
-        padding: $spacer-x-small;
+        padding: $spacer-small;
         background-color: transparent;
         @include border-radius();
         @include transition();
 
         &:hover {
-            background-color: rgba($color-dark, .1);
+            // background-color: rgba($color-dark, .1);
+            text-decoration: underline;
+        }
+    }
+
+    .footer-text {
+        margin-top: $spacer-small;
+        margin-bottom: 0;
+        line-height: 1;
+        font-size: $font-size-small;
+        font-weight: $font-normal;
+
+        i.fa {
+            color: red;
         }
     }
 
