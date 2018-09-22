@@ -48,3 +48,35 @@ $(function () {
     });
 });
 // upload files
+
+
+
+
+document.getElementById("user-input-btn").addEventListener('click', function (event) {
+    
+    var inputValue = document.getElementById("user-input").value.toLowerCase();
+
+    if(inputValue.length > 0) {
+        var newInputValue = chkURL(inputValue);
+
+        console.log(newInputValue);
+        openNewWindow('https://' + newInputValue);
+    }
+    event.preventDefault();
+
+})
+
+
+function chkURL(value) {
+
+    if (!value.startsWith('www.') && value.length > 0) {
+        value = 'www.' + value;
+    }
+    return value;
+}
+
+function openNewWindow(url) {
+    var strWindowFeatures = "menubar=yes, location=yes, resizable=yes, scrollbars=yes, status=yes";
+
+    window.open(url, 'Welcome', strWindowFeatures);
+}
