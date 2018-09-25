@@ -548,17 +548,25 @@
 
         .feature-item {
             display: flex;
-            flex: 0 1 auto;
+            flex: 0 0 23%;
             flex-flow: column wrap;
             margin: 1%;
-            padding: 3%;
+            padding: 2%;
             // background-color: rgba(0, 0, 0, .01);
             @include border-radius();
 
-            // @media all and (min-width: 481px) and (orientation: portrait) {
-            //     flex-basis: 18% !important;
-            //     // background: rgba(blue, .2);
-            // }
+            @media all and (min-width: 415px) and (orientation: portrait) {
+                flex-basis: 18% !important;
+                // background: rgba(blue, .2);
+            }
+            @media all and (min-width: 415px) and (orientation: landscape) {
+                flex-basis: calc(100% / 6 - 2%) !important;
+                // background: rgba(blue, .2);
+            }
+            @media all and (min-width: 600px) and (orientation: portrait) {
+                flex-basis: calc(100% / 6 - 2%) !important;
+                // background: rgba(blue, .2);
+            }
 
             // @media all and (max-width: 480px) and (orientation: portrait) {
             //     flex-basis: 23% !important;
