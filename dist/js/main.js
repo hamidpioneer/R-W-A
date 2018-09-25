@@ -28,9 +28,9 @@ $(function () {
 
 
 
-// User Input Btn 
+// Start User Input Btn 
 function checkURL(value) {
-
+    
     if (!value.startsWith('www.')) {
         return ('https://' + 'www.' + value);
     } else {
@@ -54,14 +54,14 @@ function btnClick(event) {
 }
 
 function btnPress(event) {
-
+    
     if(event.keyCode === 13 || event.which === 13) {
 
         var userInputValue = document.getElementById('user-input-field').value.toLowerCase();
-    
+        
         if (userInputValue.length > 0) {
             document.getElementById('user-input-btn').href = checkURL(userInputValue);
-    
+            
             
             document.getElementById('user-input-btn').click();
             event.preventDefault();
@@ -71,12 +71,42 @@ function btnPress(event) {
             console.log("You've not entered any link...");
         }
     }
-
+    
 }
 
 document.getElementById('user-input-btn').addEventListener('click', btnClick, false);
 document.getElementById('user-input-field').addEventListener('keypress', btnPress, false);
+// End User Input Btn 
 
 
+// document.getElementById('google-map-icon').addEventListener(function(event) {
 
+// });
 
+// Original copy-paste from source
+function mapsSelector() {
+    if /* if we're on iOS, open in Apple Maps */
+    ((navigator.platform.indexOf("iPhone") != -1) ||
+    (navigator.platform.indexOf("iPod") != -1) ||
+        (navigator.platform.indexOf("iPad") != -1))
+        window.open("maps://maps.google.com/maps?daddr=lat,long&amp;ll=");
+
+    else /* else use Google */
+        window.open("https://maps.google.com/maps?daddr=lat,long&amp;ll=");
+}
+
+// function mapsSelector() {
+//     console('mapSelector clicked...!');
+//     if ((navigator.platform.indexOf("iPhone") != -1) ||
+//         (navigator.platform.indexOf("iPad") != -1) ||
+//         (navigator.platform.indexOf("iPod") != -1)) { /* if we're on iOS, open in Apple Maps */
+
+//         window.open("maps://maps.google.com/maps?daddr=23.7493899,90.3654066&amp;ll=");
+
+//         } else { /* else use Google */
+
+//         window.open("https://maps.google.com/maps?daddr=23.7493899,90.3654066&amp;ll=");
+
+//         }
+        
+// }
