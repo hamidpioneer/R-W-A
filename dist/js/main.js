@@ -16,30 +16,6 @@ $( document ).ready(function() {
 
 });
 
-
-
-
-// Custon Form-input
-$(function() {
-    $('.form-control').each(function() {
-        changeState($(this));
-    });
-
-    $('.form-control').on('focusout', function() {
-
-        changeState(this);
-    })
-
-    function changeState($formControl) {
-        if ($formControl.val().length > 0) {
-            $formControl.addClass('has-value');
-        } else {
-            $formControl.removeClass('has-value');
-        }
-    }
-});
-// Custon Form-input
-
 // upload files
 $(function () {
     $("#upload_link").on('click', function (e) {
@@ -52,31 +28,55 @@ $(function () {
 
 
 
-document.getElementById("user-input-btn").addEventListener('click', function (event) {
+// User Input Btn 
+function checkURL(value) {
+
+    if (!value.startsWith('www.')) {
+        return ('https://' + 'www.' + value);
+    } else {
+        return ('https://' + value);
+    }
+
+}
+
+function btnClick(event) {
     
-    var inputValue = document.getElementById("user-input").value.toLowerCase();
-
-    if(inputValue.length > 0) {
-        var newInputValue = chkURL(inputValue);
-
-        console.log(newInputValue);
-        openNewWindow('https://' + newInputValue);
+    var userInputValue = document.getElementById('user-input-field').value.toLowerCase();
+    
+    if(userInputValue.length > 0) {
+        document.getElementById('user-input-btn').href = checkURL(userInputValue);
+        
+    } else {
+        event.preventDefault();
+        console.log("You've not entered any link...");
     }
-    event.preventDefault();
-
-})
-
-
-function chkURL(value) {
-
-    if (!value.startsWith('www.') && value.length > 0) {
-        value = 'www.' + value;
-    }
-    return value;
+    
 }
 
-function openNewWindow(url) {
-    var strWindowFeatures = "menubar=yes, location=yes, resizable=yes, scrollbars=yes, status=yes";
+function btnPress(event) {
 
-    window.open(url, 'Welcome', strWindowFeatures);
+    if(event.keyCode === 13 || event.which === 13) {
+
+        var userInputValue = document.getElementById('user-input-field').value.toLowerCase();
+    
+        if (userInputValue.length > 0) {
+            document.getElementById('user-input-btn').href = checkURL(userInputValue);
+    
+            
+            document.getElementById('user-input-btn').click();
+            event.preventDefault();
+    
+        } else {
+            event.preventDefault();
+            console.log("You've not entered any link...");
+        }
+    }
+
 }
+
+document.getElementById('user-input-btn').addEventListener('click', btnClick, false);
+document.getElementById('user-input-field').addEventListener('keypress', btnPress, false);
+
+
+
+
