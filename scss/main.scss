@@ -194,12 +194,13 @@
             flex-flow: row nowrap;
             justify-content: center;
             align-items: center;
-            height: 36px;
+            height: 48px;
 
             .input-group {
                 position: relative;
                 width: 100%;
                 font-weight: $font-normal;
+                font-size: $font-size-large;
 
 
                 &::before {
@@ -211,7 +212,6 @@
                     padding-left: 8px;
                     text-transform: lowercase;
                     color: rgba($color-light, .84);
-                    font-size: $font-size-normal;
                 }
                 
             }
@@ -220,11 +220,12 @@
                 flex: 1 1 auto;
                 padding-left: 0;
                 color: $text-color-light;
+                font-size: $font-size-large;
                 font-weight: $font-normal;
                 line-height: 1;
                 background: transparent;
                 letter-spacing: 1px;
-                height: 36px;
+                height: 100%;
                 border: 0;
                 border-radius: 0;
 
@@ -787,15 +788,13 @@
             color: $link-color-dark;
 
             a {
-                display: flex;
-                flex-flow: column;
-                align-items: center;
-                justify-content: center;
                 margin-bottom: $spacer-large;
                 color: $link-color-dark;
+                display: inline-block;
 
                 img {
-                    max-height: $spacer-large;
+                    // max-height: $spacer-large;
+                    max-height: 2rem;
                 }
 
                 span {
@@ -871,7 +870,7 @@
     }
 
     .footer-link {
-        font-size: $font-size-x-small;
+        font-size: $font-size-small;
         color: $link-color-dark !important;
         padding: $spacer-small;
         background-color: transparent;
