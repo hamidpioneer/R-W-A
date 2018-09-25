@@ -47,8 +47,8 @@
     height: 100%;
   }
 
-  @mixin border-radius() {
-    border-radius: .5rem;
+  @mixin border-radius($val: .5rem) {
+    border-radius: $val;
   }
 
   @mixin transition($value: .33s) {
