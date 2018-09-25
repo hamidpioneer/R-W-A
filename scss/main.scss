@@ -869,6 +869,7 @@
     }
 
     .footer-link {
+        display: block;
         font-size: $font-size-small;
         color: $link-color-dark !important;
         padding: $spacer-small;
@@ -886,7 +887,7 @@
         margin-top: $spacer-small;
         margin-bottom: 0;
         line-height: 1;
-        font-size: $font-size-small;
+        font-size: $font-size-x-small;
         font-weight: $font-normal;
 
         i.fa {
