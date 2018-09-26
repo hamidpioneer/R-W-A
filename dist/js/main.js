@@ -1,4 +1,4 @@
-$( document ).ready(function() {
+/*$( document ).ready(function() {
     console.log( "ready!" );
 
     $('.owl-carousel.media-section__slider, .owl-carousel.related-section__slider').owlCarousel({
@@ -7,14 +7,18 @@ $( document ).ready(function() {
         autoHeight: true,
         margin:10,
         video: true,
-        videoHeight: 300,
-        videoWidth: 200,
+        // videoHeight: 300,
+        // videoWidth: 200,
         // loop:true,
         // nav:true,
         // navText : ['<i class="fa fa-angle-left" aria-hidden="true"></i>','<i class="fa fa-angle-right" aria-hidden="true"></i>'],
     });
 
-});
+});*/
+///////////////////////////////////////////////////////////////////////////////////
+
+
+
 
 // upload files
 $(function () {
@@ -24,6 +28,7 @@ $(function () {
     });
 });
 // upload files
+///////////////////////////////////////////////////////////////////////////////////
 
 
 
@@ -77,13 +82,12 @@ function btnPress(event) {
 document.getElementById('user-input-btn').addEventListener('click', btnClick, false);
 document.getElementById('user-input-field').addEventListener('keypress', btnPress, false);
 // End User Input Btn 
+///////////////////////////////////////////////////////////////////////////////////
 
 
-// document.getElementById('google-map-icon').addEventListener(function(event) {
 
-// });
 
-// Original copy-paste from source
+// Start Google Map
 function mapsSelector() {
     if /* if we're on iOS, open in Apple Maps */
     ((navigator.platform.indexOf("iPhone") != -1) ||
@@ -94,19 +98,35 @@ function mapsSelector() {
     else /* else use Google */
         window.open("https://maps.google.com/maps?daddr=lat,long&amp;ll=");
 }
+// End Google Map
+///////////////////////////////////////////////////////////////////////////////////
 
-// function mapsSelector() {
-//     console('mapSelector clicked...!');
-//     if ((navigator.platform.indexOf("iPhone") != -1) ||
-//         (navigator.platform.indexOf("iPad") != -1) ||
-//         (navigator.platform.indexOf("iPod") != -1)) { /* if we're on iOS, open in Apple Maps */
 
-//         window.open("maps://maps.google.com/maps?daddr=23.7493899,90.3654066&amp;ll=");
 
-//         } else { /* else use Google */
+// Start Media-Section Slider
+$(document).ready(function () {
 
-//         window.open("https://maps.google.com/maps?daddr=23.7493899,90.3654066&amp;ll=");
+    var owl = $(".owl-carousel.media-section__slider");
 
-//         }
-        
-// }
+    owl.owlCarousel({
+        items: 1,
+        dots: true,
+        autoHeight: true,
+        margin: 10,
+        video: true,
+        // videoHeight: 300,
+        // videoWidth: 200,
+        // loop:true,
+        // nav:true,
+        // navText : ['<i class="fa fa-angle-left" aria-hidden="true"></i>','<i class="fa fa-angle-right" aria-hidden="true"></i>'],
+    });
+
+    // Custom Navigation Events
+    $(".next").click(function () {
+        owl.trigger('owl.next');
+        console.log('Next Btn Triggered...!');
+    })
+
+});
+// End Media-Section Slider
+///////////////////////////////////////////////////////////////////////////////////
