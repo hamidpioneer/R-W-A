@@ -932,7 +932,7 @@ ul {
         -ms-transform: scale(1.2);
         transform: scale(1.2); }
   .footer-section .footer-link {
-    display: block;
+    display: inline-block;
     font-size: 0.8rem;
     color: rgba(42, 11, 11, 0.84) !important;
     padding: 0.5rem;

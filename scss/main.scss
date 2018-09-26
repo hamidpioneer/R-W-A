@@ -918,7 +918,7 @@
     }
 
     .footer-link {
-        display: block;
+        display: inline-block;
         font-size: $font-size-small;
         color: $link-color-dark !important;
         padding: $spacer-small;
