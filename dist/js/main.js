@@ -37,9 +37,9 @@ $(function () {
 function checkURL(value) {
     
     if (!value.startsWith('www.')) {
-        return ('https://' + 'www.' + value);
+        return ('url:https://www.' + value);
     } else {
-        return ('https://' + value);
+        return ('url:https://' + value);
     }
 
 }
