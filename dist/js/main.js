@@ -42,48 +42,57 @@ $(function () {
 // Start User Input Btn 
 function checkURL(value) {
     
+    /*
     if (!value.startsWith('www.')) {
         return ('url:https://www.' + value);
     } else {
         return ('url:https://' + value);
     }
+    // This is disabled by suggest by Imran
+
+    */
+
+
+
+
+    return ("http://infixsoft.com"); // suggested by imran
 
 }
 
-// function btnClick(event) {
+function btnClick(event) {
     
-//     var userInputValue = document.getElementById('user-input-field').value.toLowerCase();
+    var userInputValue = document.getElementById('user-input-field').value.toLowerCase();
     
-//     if(userInputValue.length > 0) {
-//         document.getElementById('user-input-btn').href = checkURL(userInputValue);
+    if(userInputValue.length > 0) {
+        document.getElementById('user-input-btn').href = checkURL(userInputValue);
         
-//     } else {
-//         event.preventDefault();
-//         console.log("You've not entered any link...");
-//     }
+    } else {
+        event.preventDefault();
+        console.log("You've not entered any link...");
+    }
     
-// }
+}
 
-// function btnPress(event) {
+function btnPress(event) {
     
-//     if(event.keyCode === 13 || event.which === 13) {
+    if(event.keyCode === 13 || event.which === 13) {
 
-//         var userInputValue = document.getElementById('user-input-field').value.toLowerCase();
+        var userInputValue = document.getElementById('user-input-field').value.toLowerCase();
         
-//         if (userInputValue.length > 0) {
-//             document.getElementById('user-input-btn').href = checkURL(userInputValue);
+        if (userInputValue.length > 0) {
+            document.getElementById('user-input-btn').href = checkURL(userInputValue);
             
             
-//             document.getElementById('user-input-btn').click();
-//             event.preventDefault();
+            document.getElementById('user-input-btn').click();
+            event.preventDefault();
     
-//         } else {
-//             event.preventDefault();
-//             console.log("You've not entered any link...");
-//         }
-//     }
+        } else {
+            event.preventDefault();
+            console.log("You've not entered any link...");
+        }
+    }
     
-// }
+}
 
 document.getElementById('user-input-btn').addEventListener('click', btnClick, false);
 document.getElementById('user-input-field').addEventListener('keypress', btnPress, false);
