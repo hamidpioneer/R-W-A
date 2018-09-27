@@ -1,3 +1,9 @@
+
+
+
+
+
+
 /*$( document ).ready(function() {
     console.log( "ready!" );
 
@@ -129,4 +135,38 @@ $(document).ready(function () {
 
 });
 // End Media-Section Slider
-///////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////
+
+
+
+
+// Toast
+function showToast(text) {
+    var x = document.getElementById('toast');
+    x.innerHTML = text;
+    x.classList.add('show');
+
+    setTimeout(function () {
+        x.classList.remove('show');
+    }, 3000);
+
+    return false;
+}
+///////////////////////////////////////////////////////////////////////
+
+
+
+
+// Snackbar
+function showSnackbar(text) {
+    var x = document.getElementById('snackbar');
+    x.innerHTML = text;
+    x.classList.add('show');
+
+    setTimeout(function () {
+        x.classList.remove('show');
+    }, 3000);
+
+    return false;
+}
+///////////////////////////////////////////////////////////////////////

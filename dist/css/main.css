@@ -88,6 +88,95 @@ ul {
   .btn {
     padding: 0.5rem !important; } }
 
+#main-section {
+  position: relative;
+  width: 100vw;
+  height: 100vh; }
+
+#snackbar {
+  position: fixed;
+  bottom: -10rem;
+  left: 0;
+  right: 0;
+  background: rgba(255, 0, 0, 0.8);
+  color: #FFF;
+  padding: 0.5rem;
+  text-align: center;
+  z-index: 10;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04), 0 2px 8px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04), 0 2px 8px rgba(0, 0, 0, 0.08);
+  -webkit-transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  -o-transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); }
+  #snackbar.show {
+    visibility: visible;
+    -webkit-animation: fadeInOutSnackbar 3s;
+    animation: fadeInOutSnackbar 3s; }
+
+@-webkit-keyframes fadeInOutSnackbar {
+  5%,
+  95% {
+    opacity: 1;
+    bottom: 0; }
+  15%,
+  85% {
+    opacity: 1;
+    bottom: 0; } }
+
+@keyframes fadeInOutSnackbar {
+  5%,
+  95% {
+    opacity: 1;
+    bottom: 0; }
+  15%,
+  85% {
+    opacity: 1;
+    bottom: 0; } }
+
+#toast {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translate(-50%);
+  -ms-transform: translate(-50%);
+  transform: translate(-50%);
+  background: rgba(0, 0, 0, 0.8);
+  color: #FFF;
+  padding: 0.5rem;
+  text-align: center;
+  z-index: 10;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-border-radius: 0.125rem;
+  border-radius: 0.125rem;
+  -webkit-box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04), 0 2px 8px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04), 0 2px 8px rgba(0, 0, 0, 0.08);
+  -webkit-transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  -o-transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); }
+  #toast.show {
+    visibility: visible;
+    -webkit-animation: fadeInOut 3s;
+    animation: fadeInOut 3s; }
+
+@-webkit-keyframes fadeInOut {
+  5%, 95% {
+    opacity: 1;
+    bottom: 2rem; }
+  15%, 85% {
+    opacity: 1;
+    bottom: 1rem; } }
+
+@keyframes fadeInOut {
+  5%, 95% {
+    opacity: 1;
+    bottom: 2rem; }
+  15%, 85% {
+    opacity: 1;
+    bottom: 1rem; } }
+
 .section-padding {
   padding-top: 3rem;
   padding-bottom: 3rem;
@@ -172,9 +261,11 @@ ul {
           border-radius: 5rem;
           display: inline-block;
           padding: 0.25rem 0.5rem;
-          margin: 0; }
+          margin: 0;
+          margin-top: 1rem; }
       .hero-section .hero-section__top.hero-bg .hero-text {
-        color: #FFF; }
+        color: #FFF;
+        margin-bottom: 0; }
   .hero-section .hero-section__bottom {
     position: relative;
     z-index: 1;
@@ -1118,40 +1209,47 @@ ul {
       .special-slider-section .owl-stage-outer .owl-item:nth-last-of-type(1).active::after {
         opacity: 0; }
 
+/*
 .site-input__wrapper {
-  border: 2px solid red;
-  background-color: yellow;
-  position: relative;
-  z-index: 1; }
-  .site-input__wrapper input.site-input {
-    height: 3rem !important;
-    width: -webkit-calc(100% - 10rem);
-    width: calc(100% - 10rem);
-    color: #FFF !important;
-    outline: none;
-    -webkit-border-radius: .25rem;
-    border-radius: .25rem;
-    background-color: #6454E3 !important;
-    margin: 0;
-    padding: .5rem 1rem;
-    font-size: 1rem;
-    margin-top: 24px; }
-  .site-input__wrapper input + label {
-    position: absolute;
-    top: 0;
-    left: 0;
-    color: red;
-    background: yellow;
-    height: 24px;
-    font-size: 16px; }
-  .site-input__wrapper button {
-    padding: 0;
-    margin: 0;
-    background-color: green;
-    color: white;
-    border: 2px solid orange;
-    position: absolute;
-    z-index: 2;
-    top: 0;
-    bottom: 0;
-    right: 0; }
+    border: 2px solid red;
+    background-color: yellow;
+    position: relative;
+    z-index: 1;
+    input.site-input {
+        height: 3rem !important;
+        width: calc(100% - 10rem);
+        color: $text-color-light !important;
+        outline: none;
+        border-radius: .25rem;
+        background-color: $color-primary !important;
+        margin: 0;
+        padding: .5rem 1rem;
+        font-size: 1rem;
+        margin-top: 24px;
+    }
+    input+label {
+        position: absolute;
+        top: 0;
+        left: 0;
+        color: red;
+        background: yellow;
+        height: 24px;
+        font-size: 16px;
+
+
+    }
+    button {
+        padding: 0;
+        margin: 0;
+        background-color: green;
+        color: white;
+        border: 2px solid orange;
+        position: absolute;
+        z-index: 2;
+        top: 0;
+        bottom: 0;
+        right: 0;
+
+    }
+}
+*/
