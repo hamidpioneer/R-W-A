@@ -15,17 +15,16 @@
 // showSnackbar
 #snackbar {
     position: fixed;
-    bottom: -10rem;
+    bottom: -$spacer-xx-large;
     left: 0;
     right: 0;
-    background: rgba(255,0,0,.8);
+    background: rgba(0,0,0,.9);
     color: $text-color-light;
     padding: $spacer-small;
     text-align: center;
     z-index: 10;
     visibility: hidden;
     opacity: 0;
-    // @include border-radius($spacer-xx-small);
     @include box-shadow();
 
     &.show {
@@ -80,11 +79,11 @@
 @keyframes fadeInOut {
     5%, 95% {
         opacity: 1;
-        bottom: $spacer-large;
+        bottom: $spacer-xx-large;
     }
     15%, 85% {
         opacity: 1;
-        bottom: $spacer-medium;
+        bottom: $spacer-x-large;
     }
 }
 
