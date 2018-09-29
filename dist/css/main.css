@@ -840,55 +840,19 @@ ul {
       font-weight: bold;
       color: #FFF;
       padding: 0 0.5rem; }
-  .price-section .price-section__banner:hover .price-tag__wrapper {
-    width: 7rem;
-    height: 7rem;
-    z-index: 2;
-    -webkit-transform: translate(0, -50%) rotate(25deg);
-    -ms-transform: translate(0, -50%) rotate(25deg);
-    transform: translate(0, -50%) rotate(25deg);
-    -webkit-box-shadow: 0 19px 38px rgba(0, 0, 0, 0.16), 0 10px 26px rgba(0, 0, 0, 0.2);
-    box-shadow: 0 19px 38px rgba(0, 0, 0, 0.16), 0 10px 26px rgba(0, 0, 0, 0.2);
-    -webkit-transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-    -o-transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); }
   @media all and (orientation: landscape) {
     .price-section .price-section__banner img {
       padding-right: 10rem;
       margin: 0 auto; }
     .price-section .price-section__banner .price-tag__wrapper {
       width: 10rem;
-      height: 10rem; }
-    .price-section .price-section__banner:hover .price-tag__wrapper {
-      width: 11rem;
-      height: 11rem;
-      z-index: 2;
-      -webkit-transform: translate(0, -50%) rotate(25deg);
-      -ms-transform: translate(0, -50%) rotate(25deg);
-      transform: translate(0, -50%) rotate(25deg);
-      -webkit-box-shadow: 0 19px 38px rgba(0, 0, 0, 0.16), 0 10px 26px rgba(0, 0, 0, 0.2);
-      box-shadow: 0 19px 38px rgba(0, 0, 0, 0.16), 0 10px 26px rgba(0, 0, 0, 0.2);
-      -webkit-transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-      -o-transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-      transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); } }
+      height: 10rem; } }
   @media all and (min-width: 600px) and (orientation: portrait) {
     .price-section .price-section__banner img {
       padding-right: 9rem; }
     .price-section .price-section__banner .price-tag__wrapper {
       width: 10rem;
-      height: 10rem; }
-    .price-section .price-section__banner:hover .price-tag__wrapper {
-      width: 11rem;
-      height: 11rem;
-      z-index: 2;
-      -webkit-transform: translate(0, -50%) rotate(25deg);
-      -ms-transform: translate(0, -50%) rotate(25deg);
-      transform: translate(0, -50%) rotate(25deg);
-      -webkit-box-shadow: 0 19px 38px rgba(0, 0, 0, 0.16), 0 10px 26px rgba(0, 0, 0, 0.2);
-      box-shadow: 0 19px 38px rgba(0, 0, 0, 0.16), 0 10px 26px rgba(0, 0, 0, 0.2);
-      -webkit-transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-      -o-transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-      transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); } }
+      height: 10rem; } }
 
 .related-section .content-box.color-bg::after {
   content: none; }
