@@ -206,6 +206,9 @@
             .hero-text {
                 color: $text-color-light;
                 margin-bottom: 0;
+                a {
+                    color: $text-color-light !important;
+                }
             }
         }
     }

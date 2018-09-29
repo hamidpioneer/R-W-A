@@ -261,6 +261,8 @@ ul {
       .hero-section .hero-section__top.hero-bg .hero-text {
         color: #FFF;
         margin-bottom: 0; }
+        .hero-section .hero-section__top.hero-bg .hero-text a {
+          color: #FFF !important; }
   .hero-section .hero-section__bottom {
     position: relative;
     z-index: 1;
