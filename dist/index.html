@@ -44,8 +44,7 @@
                         </div>
                         <p class="hero-text">Welcome to <a href="http://infixsoft.com/rocket-web">RocketWeb</a><br />
                             If you want to make android app using your website, then rocketweb is the prefect solution. By saving money and
-                            precious time, even with few clicks only. Awesome!<br/>
-                            So this is the perfect time to explore more...scroll down</p>
+                            precious time, even with few clicks only. Awesome! So this is the perfect time to explore more...scroll down</p>
                     </div>
                 </div>
             </div>
@@ -56,7 +55,13 @@
                 <div class="row">
                     <div class="col-md-12 hero-section__bottom__wrapper">
                         <div class="hero-section__banner">
-                            <img src="img/Elements/BrowsingSectionPhone.png" alt="" width="320" height="350" async>
+                            <!-- <img src="img/Elements/BrowsingSectionPhone.png" alt="" width="320" height="350" async> -->
+
+                            <picture>
+                                <source media="(max-height:720px) and (orientation: portrait)" srcset="img/Elements/BrowsingSectionPhone-small.png">
+                                <source media="(max-width:720px) and (orientation: landscape)" srcset="img/Elements/BrowsingSectionPhone-small.png">
+                                <img src="img/Elements/BrowsingSectionPhone.png" alt="Hero Banner Iamge" width="320" height="600">
+                            </picture>
                         </div>
     
     
