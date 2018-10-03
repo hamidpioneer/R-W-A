@@ -40,62 +40,68 @@ $(function () {
 
 
 // Start User Input Btn 
-function checkURL(value) {
-    
-    /*
-    if (!value.startsWith('www.')) {
-        return ('url:https://www.' + value);
-    } else {
-        return ('url:https://' + value);
-    }
-    // This is disabled by suggest by Imran
-
-    */
-
-
-
-
-    return ("http://infixsoft.com"); // suggested by imran
-
+function isUrlValid(userInput) {
+    var res = userInput.match(/(http(s)?:\/\/.)?(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&=]*)/g);
+    if (res == null)
+        return false;
+    else
+        return true;
 }
 
-function btnClick(event) {
-    
-    var userInputValue = document.getElementById('user-input-field').value.toLowerCase();
-    
-    if(userInputValue.length > 0) {
-        document.getElementById('user-input-btn').href = checkURL(userInputValue);
-        
-    } else {
-        event.preventDefault();
-        console.log("You've not entered any link...");
-    }
-    
-}
 
-function btnPress(event) {
-    
-    if(event.keyCode === 13 || event.which === 13) {
+function getUrl(value) {
 
-        var userInputValue = document.getElementById('user-input-field').value.toLowerCase();
-        
-        if (userInputValue.length > 0) {
-            document.getElementById('user-input-btn').href = checkURL(userInputValue);
-            
-            
-            document.getElementById('user-input-btn').click();
-            event.preventDefault();
-    
+    if(isUrlValid(value)) {
+        if (!value.startsWith('www.')) {
+            return ('url:https://www.' + value);
         } else {
-            event.preventDefault();
-            console.log("You've not entered any link...");
+            return ('url:https://' + value);
+        }
+    } else {
+        return "";
+    }
+}
+
+
+function urlBtnClick($event) {
+    var userInputField = document.getElementById('user-input-field');
+    var userInputBtn = document.getElementById('user-input-btn');
+    var isUrl = getUrl(userInputField.value.toLowerCase());
+
+    if (isUrl.length > 0) {
+        userInputBtn.href = isUrl;
+        $event.stopPropagation();
+    } else {
+        window.alert("Please...enter a valid url");
+        userInputField.focus();
+        $event.stopPropagation();
+        $event.preventDefault();
+    }
+}
+
+function urlBtnPress($event) {
+    
+    if($event.keyCode === 13 || $event.which === 13) {
+        var userInputField = document.getElementById('user-input-field');
+        var userInputBtn = document.getElementById('user-input-btn');
+        var isUrl = getUrl(userInputField.value.toLowerCase());
+
+        if (isUrl.length > 0) {
+            userInputBtn.href = isUrl;
+            userInputBtn.click();
+            $event.stopPropagation();
+        } else {
+            window.alert("Please...enter a valid url");
+            userInputField.focus();
+            $event.stopPropagation();
+            $event.preventDefault();
         }
     }
     
 }
 
-document.getElementById('user-input-btn').addEventListener('click', btnClick, false);
-document.getElementById('user-input-field').addEventListener('keypress', btnPress, false);
+document.getElementById('user-input-btn').addEventListener('click', urlBtnClick);
+document.getElementById('user-input-field').addEventListener('keypress', urlBtnPress);
 // End User Input Btn 
 ///////////////////////////////////////////////////////////////////////////////////
 
