@@ -1241,3 +1241,49 @@
     }
 }
 */
+
+
+
+// Start Error-Page Section
+.error-page-section {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    padding: $spacer-x-large 0;
+
+    .error-page-section__image-wrapper {
+        position: relative;
+        z-index: 1;
+        padding-bottom: $spacer-x-large;
+        img {
+            width: 100%;
+            max-width: 100%;
+            height: auto;
+        }
+    }
+
+    .section-heading {
+        .heading {
+            span {
+                font-weight: normal;
+            }
+        }
+
+        p {
+            font-size: $font-size-normal;
+            span {
+                color: $text-color-primary;
+                font-weight: $font-bold;
+            }
+        }
+    }
+
+    .btn span {
+        font-weight: $font-bold;
+
+        &:hover {
+            color: rgba(255, 255, 255, .84) !important;
+        }
+    }
+}
+// End Error-Page Section

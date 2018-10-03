@@ -1,7 +1,10 @@
 html, body {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
+  width: 100%;
+  width: 100vw;
   height: 100%;
+  height: 100vh;
   padding: 0;
   margin: 0; }
 
@@ -1214,3 +1217,27 @@ ul {
     }
 }
 */
+.error-page-section {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  padding: 3rem 0; }
+  .error-page-section .error-page-section__image-wrapper {
+    position: relative;
+    z-index: 1;
+    padding-bottom: 3rem; }
+    .error-page-section .error-page-section__image-wrapper img {
+      width: 100%;
+      max-width: 100%;
+      height: auto; }
+  .error-page-section .section-heading .heading span {
+    font-weight: normal; }
+  .error-page-section .section-heading p {
+    font-size: 1rem; }
+    .error-page-section .section-heading p span {
+      color: #6454E3;
+      font-weight: 700; }
+  .error-page-section .btn span {
+    font-weight: 700; }
+    .error-page-section .btn span:hover {
+      color: rgba(255, 255, 255, 0.84) !important; }
