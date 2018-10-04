@@ -53,9 +53,9 @@ function getUrl(value) {
 
     if(isUrlValid(value)) {
         if (!value.startsWith('www.')) {
-            return ('url:https://www.' + value);
+            return ('https://www.' + value);
         } else {
-            return ('url:https://' + value);
+            return ('https://' + value);
         }
     } else {
         return "";
@@ -73,6 +73,7 @@ function urlBtnClick($event) {
         $event.stopPropagation();
     } else {
         window.alert("Please...enter a valid url");
+        userInputField.style.backgroundColor = "rgba(255,0,0,.1)";
         userInputField.focus();
         $event.stopPropagation();
         $event.preventDefault();
@@ -90,8 +91,10 @@ function urlBtnPress($event) {
             userInputBtn.href = isUrl;
             userInputBtn.click();
             $event.stopPropagation();
+            $event.preventDefault();
         } else {
             window.alert("Please...enter a valid url");
+            userInputField.style.backgroundColor = "rgba(255,0,0,.1)";
             userInputField.focus();
             $event.stopPropagation();
             $event.preventDefault();
