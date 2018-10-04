@@ -64,16 +64,18 @@ function getUrl(value) {
 
 
 function urlBtnClick($event) {
+    var heroUuserInputWrapperDiv = document.getElementById('hero-user-input-wrapperDiv');
     var userInputField = document.getElementById('user-input-field');
     var userInputBtn = document.getElementById('user-input-btn');
     var isUrl = getUrl(userInputField.value.toLowerCase());
 
     if (isUrl.length > 0) {
         userInputBtn.href = isUrl;
+        heroUuserInputWrapperDiv.style.borderColor = "rgba(0,255,0,1)";
         $event.stopPropagation();
     } else {
         window.alert("Please...enter a valid url");
-        userInputField.style.backgroundColor = "rgba(255,0,0,.1)";
+        heroUuserInputWrapperDiv.style.borderColor = "rgba(255,0,0,1)";
         userInputField.focus();
         $event.stopPropagation();
         $event.preventDefault();
@@ -82,7 +84,8 @@ function urlBtnClick($event) {
 
 function urlBtnPress($event) {
     
-    if($event.keyCode === 13 || $event.which === 13) {
+    if ($event.keyCode === 13 || $event.which === 13) {
+        var heroUuserInputWrapperDiv = document.getElementById('hero-user-input-wrapperDiv');
         var userInputField = document.getElementById('user-input-field');
         var userInputBtn = document.getElementById('user-input-btn');
         var isUrl = getUrl(userInputField.value.toLowerCase());
@@ -90,11 +93,12 @@ function urlBtnPress($event) {
         if (isUrl.length > 0) {
             userInputBtn.href = isUrl;
             userInputBtn.click();
+            heroUuserInputWrapperDiv.style.borderColor = "rgba(0,255,0,1)";
             $event.stopPropagation();
             $event.preventDefault();
         } else {
             window.alert("Please...enter a valid url");
-            userInputField.style.backgroundColor = "rgba(255,0,0,.1)";
+            heroUuserInputWrapperDiv.style.borderColor = "rgba(255,0,0,1)";
             userInputField.focus();
             $event.stopPropagation();
             $event.preventDefault();

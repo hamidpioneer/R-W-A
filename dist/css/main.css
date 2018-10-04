@@ -313,6 +313,7 @@ ul {
     left: 15px;
     right: 15px;
     bottom: 0;
+    border: 1px solid transparent;
     -webkit-border-radius: 0.5rem;
     border-radius: 0.5rem;
     -webkit-box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04), 0 2px 8px rgba(0, 0, 0, 0.08);
