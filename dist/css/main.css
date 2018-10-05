@@ -354,7 +354,7 @@ ul {
         font-weight: 400;
         font-size: 1.2rem; }
         .hero-section .hero-user-input form .input-group::before {
-          content: "https://";
+          content: "www.";
           display: -webkit-box;
           display: -webkit-flex;
           display: -ms-flexbox;
