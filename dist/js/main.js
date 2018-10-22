@@ -41,7 +41,9 @@ $(function () {
 
 // Start User Input Btn 
 function isUrlValid(userInput) {
-    var res = userInput.match(/(http(s)?:\/\/.)?(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&=]*)/g);
+    // var res = userInput.match(/(http(s)?:\/\/.)?(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&=]*)/g);
+    
+    var res = userInput.match(/^(?:(?:ht|f)tp(?:s?)\:\/\/|~\/|\/)?(?:\w+:\w+@)?((?:(?:[-\w\d{1-3}]+\.)+(?:com|org|net|gov|mil|biz|info|mobi|name|aero|jobs|edu|co\.uk|ac\.uk|it|fr|tv|museum|asia|local|travel|[a-z]{2}))|((\b25[0-5]\b|\b[2][0-4][0-9]\b|\b[0-1]?[0-9]?[0-9]\b)(\.(\b25[0-5]\b|\b[2][0-4][0-9]\b|\b[0-1]?[0-9]?[0-9]\b)){3}))(?::[\d]{1,5})?(?:(?:(?:\/(?:[-\w~!$+|.,=]|%[a-f\d]{2})+)+|\/)+|\?|#)?(?:(?:\?(?:[-\w~!$+|.,*:]|%[a-f\d{2}])+=?(?:[-\w~!$+|.,*:=]|%[a-f\d]{2})*)(?:&(?:[-\w~!$+|.,*:]|%[a-f\d{2}])+=?(?:[-\w~!$+|.,*:=]|%[a-f\d]{2})*)*)*(?:#(?:[-\w~!$ |\/.,*:;=]|%[a-f\d]{2})*)?$/i);
     if (res == null)
         return false;
     else
@@ -52,14 +54,31 @@ function isUrlValid(userInput) {
 function getUrl(value) {
 
     if(isUrlValid(value)) {
-        if (!value.startsWith('www.')) {
-            return ('https://www.' + value);
-        } else {
+        if (value.startsWith('https://')) {
+            if(value.startsWith('https://www')) {
+                console.log(value);
+                return value;
+            } else {
+                let newUrl = value.replace('https://', 'https://www.');
+                console.log(newUrl);
+                return newUrl;
+            }
+        } else if (value.startsWith('http://')) {
+            if(value.startsWith('http://www')) {
+                console.log(value);
+                return value;
+            } else {
+                let newUrl = value.replace('http://', 'https://www.');
+                console.log(newUrl);
+                return newUrl;
+            }
+        } else if (value.startsWith('www')) {
             return ('https://' + value);
+        } else {
+            return ('https://www.' + value);
         }
-    } else {
-        return "";
     }
+    
 }
 
 
