@@ -240,7 +240,10 @@ ul {
       .hero-section .hero-section__top.hero-bg .branding {
         margin-bottom: 1rem; }
         .hero-section .hero-section__top.hero-bg .branding img {
-          max-width: 3.5rem; }
+          max-height: 3.5rem;
+          width: auto;
+          display: block;
+          margin: 0 auto; }
         .hero-section .hero-section__top.hero-bg .branding h1 {
           color: #FFF;
           font-family: "Montserrat", sans-serif;
@@ -267,6 +270,7 @@ ul {
         .hero-section .hero-section__top.hero-bg .hero-text a {
           color: #FFF !important; }
   .hero-section .hero-section__bottom {
+    margin-top: 2rem;
     position: relative;
     z-index: 1;
     left: 0;
@@ -803,7 +807,8 @@ ul {
     position: relative;
     display: block;
     z-index: 1;
-    padding-right: 6rem; }
+    padding-right: 6rem;
+    margin: 0 auto; }
   .price-section .price-section__banner .price-tag__wrapper {
     background: #6454E3;
     -webkit-border-radius: 50%;
@@ -846,6 +851,31 @@ ul {
       font-weight: bold;
       color: #FFF;
       padding: 0 0.5rem; }
+  @media all and (min-width: 769px) and (orientation: portrait) {
+    .price-section .price-section__banner img {
+      padding-right: 0rem; }
+    .price-section .price-section__banner .price-tag__wrapper {
+      width: 10rem;
+      height: 10rem; } }
+  @media all and (max-width: 767px) and (orientation: portrait) {
+    .price-section .price-section__banner img {
+      padding-right: 3rem; }
+    .price-section .price-section__banner .price-tag__wrapper {
+      width: 10rem;
+      height: 10rem;
+      top: 40%; } }
+  @media all and (max-width: 556px) and (orientation: portrait) {
+    .price-section .price-section__banner img {
+      padding-right: 6rem; }
+    .price-section .price-section__banner .price-tag__wrapper {
+      width: 8rem;
+      height: 8rem; } }
+  @media all and (max-width: 440px) and (orientation: portrait) {
+    .price-section .price-section__banner img {
+      padding-right: 6rem; }
+    .price-section .price-section__banner .price-tag__wrapper {
+      width: 6rem;
+      height: 6rem; } }
   @media all and (orientation: landscape) {
     .price-section .price-section__banner img {
       padding-right: 10rem;
@@ -853,12 +883,38 @@ ul {
     .price-section .price-section__banner .price-tag__wrapper {
       width: 10rem;
       height: 10rem; } }
-  @media all and (min-width: 600px) and (orientation: portrait) {
+  @media all and (min-width: 769px) and (orientation: landscape) {
     .price-section .price-section__banner img {
-      padding-right: 9rem; }
+      padding-right: 0rem; }
     .price-section .price-section__banner .price-tag__wrapper {
       width: 10rem;
-      height: 10rem; } }
+      height: 10rem;
+      top: 50%; } }
+  @media all and (max-width: 768px) and (orientation: landscape) {
+    .price-section .price-section__banner img {
+      padding-right: 3rem; }
+    .price-section .price-section__banner .price-tag__wrapper {
+      width: 10rem;
+      height: 10rem;
+      top: 40%; } }
+  @media all and (max-width: 575px) and (orientation: landscape) {
+    .price-section .price-section__banner img {
+      padding-right: 0rem; }
+    .price-section .price-section__banner .price-tag__wrapper {
+      width: 8rem;
+      height: 8rem; } }
+  @media all and (max-width: 574px) and (orientation: landscape) {
+    .price-section .price-section__banner img {
+      padding-right: 6rem; }
+    .price-section .price-section__banner .price-tag__wrapper {
+      width: 8rem;
+      height: 8rem; } }
+  @media all and (max-width: 480px) and (orientation: landscape) {
+    .price-section .price-section__banner img {
+      padding-right: 6rem; }
+    .price-section .price-section__banner .price-tag__wrapper {
+      width: 6rem;
+      height: 6rem; } }
 
 .related-section .content-box.color-bg::after {
   content: none; }

@@ -173,7 +173,11 @@
                 margin-bottom: $spacer-medium;
 
                 img {
-                    max-width: 3.5rem;
+                    // max-width: 3.5rem;
+                    max-height: 3.5rem;
+                    width: auto;
+                    display: block;
+                    margin: 0 auto;
                 }
 
                 h1 {
@@ -214,6 +218,7 @@
     }
 
     .hero-section__bottom {
+        margin-top: 2rem;
 
         .hero-section__bottom__wrapper {
             position: relative;
@@ -759,6 +764,7 @@
             display: block;
             z-index: 1;
             padding-right: 6rem;
+            margin: 0 auto;
         }
 
         .price-tag__wrapper {
@@ -789,6 +795,53 @@
 
         }
 
+        // Portrait
+        @media all and (min-width: 769px) and (orientation: portrait) {
+            img {
+                padding-right: 0rem;
+            }
+            .price-tag__wrapper {
+                width: 10rem;
+                height: 10rem;
+            }
+        }              
+
+        @media all and (max-width: 767px) and (orientation: portrait) {
+            img {
+                padding-right: 3rem;
+            }
+            .price-tag__wrapper {
+                width: 10rem;
+                height: 10rem;
+                top: 40%;
+            }
+        }
+
+        @media all and (max-width: 556px) and (orientation: portrait) {
+            img {
+                padding-right: 6rem;
+            }
+            .price-tag__wrapper {
+                width: 8rem;
+                height: 8rem;
+            }
+        }
+
+        @media all and (max-width: 440px) and (orientation: portrait) {
+            img {
+                padding-right: 6rem;
+            }
+            .price-tag__wrapper {
+                width: 6rem;
+                height: 6rem;
+            }
+        }
+
+
+
+
+
+        // Landscape
         @media all and (orientation: landscape)  {
             img {
                 padding-right: 10rem;
@@ -801,16 +854,65 @@
             }
         }
 
-        @media all and (min-width: 600px) and (orientation: portrait) {
+        @media all and (min-width: 769px) and (orientation: landscape) {
             img {
-                padding-right: 9rem;
+                padding-right: 0rem;
             }
             .price-tag__wrapper {
                 width: 10rem;
                 height: 10rem;
+                top: 50%;
+            }
+        }              
+
+        @media all and (max-width: 768px) and (orientation: landscape) {
+            img {
+                padding-right: 3rem;
+            }
+            .price-tag__wrapper {
+                width: 10rem;
+                height: 10rem;
+                top: 40%;
                 
             }
         }
+
+        @media all and (max-width: 575px) and (orientation: landscape) {
+            img {
+                padding-right: 0rem;
+            }
+            .price-tag__wrapper {
+                width: 8rem;
+                height: 8rem;
+            }
+        }
+
+        @media all and (max-width: 574px) and (orientation: landscape) {
+            img {
+                padding-right: 6rem;
+            }
+            .price-tag__wrapper {
+                width: 8rem;
+                height: 8rem;
+            }
+        }
+
+        @media all and (max-width: 480px) and (orientation: landscape) {
+            img {
+                padding-right: 6rem;
+            }
+            .price-tag__wrapper {
+                width: 6rem;
+                height: 6rem;
+            }
+        }
+
+        
+
+        
+
+        
+
     }
 }
 // End Mobile App Section
