@@ -60,16 +60,20 @@ section.error-page-section {
       .site-container .error-page-section__content-wrapper {
         margin: 2rem 0; } }
     .site-container .error-page-section__content-wrapper h1 {
-      font-weight: 700;
+      font-weight: 400;
       font-size: 1.2rem;
       margin-bottom: 1rem;
       color: #261F1F; }
       .site-container .error-page-section__content-wrapper h1 span {
-        font-weight: 400; }
+        font-weight: 900;
+        color: #000; }
     .site-container .error-page-section__content-wrapper p {
       font-size: 1rem; }
       .site-container .error-page-section__content-wrapper p span {
         color: #6454E3;
+        font-weight: 700; }
+      .site-container .error-page-section__content-wrapper p .darkText {
+        color: #000;
         font-weight: 700; }
   .site-container .site-btn {
     display: block;

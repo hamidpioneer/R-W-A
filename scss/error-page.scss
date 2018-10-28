@@ -76,13 +76,14 @@ section.error-page-section {
 
     h1 {
       $sans-serif-secondary: 'Montserrat', sans-serif;
-      font-weight: 700;
+      font-weight: 400;
       font-size: 1.2rem;
       margin-bottom: 1rem;
       color: #261F1F;
 
       span {
-        font-weight: 400;
+        font-weight: 900;
+        color: #000;
       }
     }
 
@@ -91,6 +92,10 @@ section.error-page-section {
 
       span {
         color: #6454E3;
+        font-weight: 700;
+      }
+      .darkText {
+        color: #000;
         font-weight: 700;
       }
 
