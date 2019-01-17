@@ -53,48 +53,65 @@ function isUrlValid(userInput) {
 
 function getUrl(value) {
 
-    if(isUrlValid(value)) {
-        if (value.startsWith('https://')) {
-            if(value.startsWith('https://www')) {
-                console.log(value);
-                return value;
-            } else {
-                let newUrl = value.replace('https://', 'https://www.');
-                console.log(newUrl);
-                return newUrl;
-            }
-        } else if (value.startsWith('http://')) {
-            if(value.startsWith('http://www')) {
-                console.log(value);
-                return value;
-            } else {
-                let newUrl = value.replace('http://', 'https://www.');
-                console.log(newUrl);
-                return newUrl;
-            }
-        } else if (value.startsWith('www')) {
-            return ('https://' + value);
+    if (isUrlValid(value)) {
+        if (value.startsWith('http:') || value.startsWith('https:')) {
+            return value;
         } else {
-            return ('https://www.' + value);
+            var newUrl = 'http://' + value;
+            console.log('with HTTP: --- ' + newUrl);
+            return newUrl;
         }
+
+    } else {
+        return false;
     }
+
+
+
+    // if(isUrlValid(value)) {
+    //     if (value.startsWith('https://')) {
+    //         if(value.startsWith('https://www')) {
+    //             console.log(value);
+    //             return value;
+    //         } else {
+    //             let newUrl = value.replace('https://', 'https://www.');
+    //             console.log(newUrl);
+    //             return newUrl;
+    //         }
+    //     } else if (value.startsWith('http://')) {
+    //         if(value.startsWith('http://www')) {
+    //             console.log(value);
+    //             return value;
+    //         } else {
+    //             let newUrl = value.replace('http://', 'https://www.');
+    //             console.log(newUrl);
+    //             return newUrl;
+    //         }
+    //     } else if (value.startsWith('www')) {
+    //         return ('https://' + value);
+    //     } else {
+    //         return ('https://www.' + value);
+    //     }
+    // } else {
+    //     return false;
+    // }
     
 }
 
 
 function urlBtnClick($event) {
-    var heroUuserInputWrapperDiv = document.getElementById('hero-user-input-wrapperDiv');
+    var heroUserInputWrapperDiv = document.getElementById('hero-user-input-wrapperDiv');
     var userInputField = document.getElementById('user-input-field');
     var userInputBtn = document.getElementById('user-input-btn');
     var isUrl = getUrl(userInputField.value.toLowerCase());
 
-    if (isUrl.length > 0) {
+    if (isUrl) {
         userInputBtn.href = isUrl;
-        heroUuserInputWrapperDiv.style.borderColor = "rgba(0,255,0,1)";
+        heroUserInputWrapperDiv.style.borderColor = "rgba(0,255,0,1)";
         $event.stopPropagation();
     } else {
         window.alert("Please...enter a valid url");
-        heroUuserInputWrapperDiv.style.borderColor = "rgba(255,0,0,1)";
+        heroUserInputWrapperDiv.style.borderColor = "rgba(255,0,0,1)";
         userInputField.focus();
         $event.stopPropagation();
         $event.preventDefault();
@@ -104,20 +121,20 @@ function urlBtnClick($event) {
 function urlBtnPress($event) {
     
     if ($event.keyCode === 13 || $event.which === 13) {
-        var heroUuserInputWrapperDiv = document.getElementById('hero-user-input-wrapperDiv');
+        var heroUserInputWrapperDiv = document.getElementById('hero-user-input-wrapperDiv');
         var userInputField = document.getElementById('user-input-field');
         var userInputBtn = document.getElementById('user-input-btn');
         var isUrl = getUrl(userInputField.value.toLowerCase());
 
-        if (isUrl.length > 0) {
+        if (isUrl) {
             userInputBtn.href = isUrl;
             userInputBtn.click();
-            heroUuserInputWrapperDiv.style.borderColor = "rgba(0,255,0,1)";
+            heroUserInputWrapperDiv.style.borderColor = "rgba(0,255,0,1)";
             $event.stopPropagation();
             $event.preventDefault();
         } else {
             window.alert("Please...enter a valid url");
-            heroUuserInputWrapperDiv.style.borderColor = "rgba(255,0,0,1)";
+            heroUserInputWrapperDiv.style.borderColor = "rgba(255,0,0,1)";
             userInputField.focus();
             $event.stopPropagation();
             $event.preventDefault();
